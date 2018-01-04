@@ -1,0 +1,217 @@
+/*a[href^=tel], a{
+  color: black;
+}*/
+
+#footer{
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+/*max-width 1000px*/
+#footer-about,
+#footer-copyright{
+  width: 1000px;
+}
+
+#footer section,
+#footer-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#footer h4{
+  margin-top: 0;
+}
+#footer p{
+  font-size: 17px;
+}
+
+
+#footer #footer-about{
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 25px 0;
+  align-items: flex-start;
+}
+#footer-contactus img{
+  width: 30px;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+
+
+/*follow us*/
+#footer-followus div{
+  display: flex;
+}
+#footer-followus div p{
+  margin: 0 5px;
+}
+#footer-followus img{
+  width: 40px;
+}
+
+
+
+/*footer links*/
+#footer-links{
+  align-items: flex-start;
+  flex-direction: column;
+}
+#footer-links a{
+  display: inline-block;
+  color: black;
+  font-size: 17px;
+}
+#footer-links a:hover{
+  text-decoration: underline;
+}
+#footer-about a:last-child{
+  margin-top: 10px;
+}
+
+
+/*footer-address*/
+#footer-address{
+  font-weight: 300;
+}
+#footer-address address{
+  font-style: normal;
+  font-size: 17px;
+}
+#footer-address img{
+  width: 200px;
+}
+
+
+/*copyright section*/
+#footer #footer-copyright{
+  border-top: 1px solid #c5c5c5;
+  margin: 0 auto;
+  padding: 10px 0;
+  justify-content: space-between;
+  color: #373636;
+  font-weight: 300;
+}
+#footer-copyright a{
+  color: #373636;
+}
+#footer-copyright a:hover{
+  text-decoration: underline;
+}
+
+
+
+@media(max-width: 1080px){
+  #footer-about{
+    width: 800px;
+    flex-wrap: wrap;
+  }
+  #footer-about > div{
+    width: 40%;
+  }
+  #footer-about > div:nth-child(2n){
+    width: 240px;
+  }
+  #footer-followus,
+  #footer-links{
+    margin-top: 20px;
+  }
+  #footer-copyright{
+    width: 800px;
+  }
+}
+
+@media(max-width: 900px){
+  #footer-about,#footer-copyright{
+    width: 700px;
+  }
+}
+
+
+@media(max-width: 768px){
+ #footer-about,#footer-copyright{
+    width: 550px;
+  } 
+}
+
+@media(max-width: 600px) {
+  #footer-about{
+    width: 100%;
+  }
+  #footer-copyright{
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+  #footer-about > div{
+    width: 100%;
+    flex-direction: column;
+    padding: 0 15px;
+    margin-top: 30px;
+  }
+  #footer-about > div:nth-child(2n){
+    width: 100%;
+  }
+
+  /*changing order in mobile*/
+  #footer-address{
+    order: 4;
+  }
+  #footer-contactus{
+    order: 2;
+  }
+  #footer-followus{
+    order: 3;
+    margin-top: 0;
+  }
+  #footer-about #footer-links{
+    order: 1;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  /*tooltip phone, whatsapp*/
+  .footer-phone, .footer-whatsapp{
+    position: relative;
+  }
+  .footer-phone:before, .footer-whatsapp:before{
+    content: 'Click to call';
+    color: white;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 178px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+    background: rgba(0,0,0,0.8);
+  }
+  .footer-whatsapp:before{
+    content: 'Click to whatsapp';
+    top: 40px;
+  }
+  .footer-phone:after, .footer-whatsapp:after{
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 4px;
+    border-top: 9px solid rgba(0,0,0,0.8);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+  }
+  .footer-whatsapp:after{
+    border-bottom: 9px solid rgba(0,0,0,0.8);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: none;
+    top: 31px;
+  }
+}
