@@ -1,0 +1,208 @@
+.mentorship{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 150px 0 80px;
+  background: linear-gradient(to right, #4372b9, #56ba70);
+}
+
+/*mentorship-intro*/
+.mentorship-intro{
+  width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+.mentorship-intro h1{
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-family: 'Merriweather', serif;
+}
+.mentorship-intro p{
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 300;
+}
+
+/*mentorship question asked*/
+.mentor-ques{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mentor-ques .question{
+  width: 400px;
+  margin: 0 15px;
+}
+
+/*4 questions para*/
+.mentor-ques div p{
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 200;
+}
+
+/*mentorship package heading*/
+.mentorship-package > h1{
+  font-size: 50px;
+  font-weight: 200;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+/*package*/
+.package{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.package > div{
+  width: 350px;
+  background: #fdfdfd;
+  border-radius: 8px;
+  padding: 15px 30px;
+  box-shadow: 0 0px 5px 0px #908f8f;
+  margin: 0 10px;
+  
+}
+
+.package h1{
+  margin-bottom: 0;
+}
+.package h1 ~ p{
+  font-size: 18px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.package img{
+  height: 140px;
+}
+
+.package a{
+  padding: 9px 20px;
+  background: #56ba78;
+  border-radius: 25px;
+  color: white;
+  display: inline-block;
+  box-shadow: 0 2px 4px 0 #307f4a;
+  transition: all 0.2s ease-out;
+}
+.package a:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 9px 14px -5px #307f4a
+}
+
+/*pricing value*/
+.package h6{
+  font-weight: 400;
+  font-size: 17px;
+  margin: 20px 0;
+}
+.package p{
+  font-weight: 200;
+  font-size: 17px;
+}
+
+/*svg-animation house*/
+.svg-line {
+  animation: offset 2s linear forwards;
+}
+.svg-rect{
+  animation: offset 2.5s linear forwards;
+}
+.svg-path {
+  animation: offset 3s linear forwards;
+}
+.svg-line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+.svg-rect {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+}
+.svg-path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+@keyframes offset {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+@media(max-width: 900px){
+  .mentorship-intro{
+    width: 768px;
+    padding: 0 30px;
+  }
+  .mentorship-intro p{
+    text-align: center;
+  }
+  .mentor-ques {
+    flex-direction: column;
+  }
+  /*college comes above before all questions*/
+  .college-img{
+    order: 1;
+  }
+  .question{
+    order: 2;
+  }
+
+  .mentor-ques > div:last-child p{
+    margin-top: 0;
+  }
+  .package {
+    flex-direction: column;
+    align-items: center;
+  }
+  .package > div{
+    margin: 15px 0;
+  }
+}
+
+@media(max-width: 768px){
+  .mentorship-intro{
+    width: 600px;
+  }
+  .mentorship-intro h1{
+    font-size: 80px;
+  }
+}
+
+@media(max-width: 600px) {
+  .mentorship{
+    padding-top: 100px;
+  }
+  .mentorship-intro{
+    width: 100%;
+  }
+  .mentorship-intro h1 {
+    font-size: 60px;
+  }
+  .question {
+    padding: 0 15px;
+  }
+}
+
+@media(max-width: 380px) {
+  .mentorship-intro h1, .mentorship-package > h1{
+    font-size: 45px;
+  }
+  .mentorship-intro{
+    padding: 0 15px;
+  }
+  .mentor-ques .question{
+    width: 100%;
+  }
+  .package{
+    width: 100%;
+    padding: 0 15px;
+  }
+}
