@@ -1,0 +1,148 @@
+.exam{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 150px 0 80px;
+  text-align: center;
+  background: linear-gradient(to right, #4372b9, #56ba70);
+  color: white;
+}
+
+.exam h1,.exam p{
+  width: 800px;
+}
+.exam h1{
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  font-family: 'Merriweather', serif;
+}
+.exam p{
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 27px;
+}
+
+/*examlist*/
+.exam-list{
+  padding: 50px 0;
+}
+.list{
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 18px;
+  border-bottom: 1px solid #eaeaea;
+}
+.list:nth-child(2n){
+  background: #fdfdfd;
+}
+
+/*all div[list-heading/list-content] inside each list*/
+.list div{
+  display: flex;
+}
+
+.list-heading{
+  font-family: 'Merriweather', serif;
+  font-size: 40px;
+  color: #73da73;    
+}
+.list-content{
+  justify-content: space-between;
+  align-content: center;
+  font-size: 18px;
+}
+
+.list div:last-child p{
+  margin-bottom: 0;
+}
+
+.list span,.list a{
+  font-weight: 200;
+}
+
+.list-heading p:first-child{
+  font-size: 40px;
+  color: black;
+  margin-right: 15px;
+}
+
+.list-heading p{
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+/*button in list*/
+.list a{
+  font-size: 17px;
+  padding: 9px 22px;
+  border-radius: 25px;
+  color: black;
+  border: 1px solid black;
+  display: inline-block;
+  transition: all 0.2s ease-out;
+}
+.list a:hover{
+  background: #424141;
+  color: white;
+  border-color: #424141;
+}
+
+
+@media(max-width: 900px){
+  .exam h1, .exam p, .list {
+    width: 720px;
+  }
+}
+
+
+@media(max-width: 768px){
+  .exam h1, .exam p, .list {
+    width: 550px;
+  }
+  .list-content{
+    flex-wrap: wrap;
+  }
+  .list a {
+    margin-top: 18px;
+    text-align: center;
+  }
+}
+
+
+@media(max-width: 600px) {
+  .exam{
+    padding-top: 100px;
+  }
+  .exam h1, .exam p, .list {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .list-content{
+    flex-direction: column;
+  }
+  .list div:last-child p{
+    margin-bottom: 18px;
+  }
+  .list a {
+    margin-bottom: 18px;
+    width: 50%;
+  } 
+}
+
+
+@media(max-width: 380px) {
+  .exam h1{
+    font-size: 40px;
+  }
+  .list-heading{
+    font-size: 30px;
+  }
+  .list a {
+    width: 100%;
+  }
+}
