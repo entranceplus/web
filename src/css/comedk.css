@@ -1,0 +1,153 @@
+.comedk{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 150px 0 80px;
+  background: linear-gradient(to right, #4372b9, #56ba70);
+}
+
+.comedk-intro{
+    width: 900px;
+    color: white;
+}
+.comedk-intro h1{
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-family: 'Merriweather', serif;
+}
+.comedk-intro p{
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 300;
+}
+
+/*button in comedk*/
+.comedk-intro a{
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 200;
+  background: white;
+  color: #55708d;
+  transition: all 0.2s cubic-bezier(0, 0, 0.56, 1.44);
+}
+.comedk-intro a:hover{
+  box-shadow: 0 2px 6px 0 rgba(255,255,255,0.8);
+  transform: translateY(-3px);
+}
+
+/*common section in comedk*/
+.comedk-common{
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  margin: 50px auto;
+}
+.comedk-common div{
+  margin: 20px;
+}
+.comedk-common h1{
+  position: relative;
+  font-size: 42px;
+  font-family: 'Merriweather', serif;
+}
+
+.comedk-common h1:before{
+  position: absolute;
+  font-family: 'Merriweather', serif;
+  top: -100px;
+  left: -35px;
+  font-size: 110px;
+  color: #f1f2f1;
+  z-index: -1;
+}
+/*numbering in different section*/
+.comedk-about h1:before{
+  content: '01';
+}
+.comedk-eligibility h1:before{
+  content: '02';
+}
+.comedk-councelling h1:before{
+  content: '03';
+}
+.comedk-fee h1:before{
+  content: '04';
+}
+
+.comedk-common p{
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 300;
+  color: #313030;
+}
+
+/*logo in comedk about section*/
+.comedk-logo{
+  flex: 0 0 200px;
+  padding: 15px;
+  box-shadow: 0 0px 5px 0 #b5b5b5;
+  text-align: center;
+  border-radius: 3px;
+}
+.comedk-logo img{
+  width: 100%;
+}
+
+
+@media(max-width: 1200px){
+  .comedk-intro,.comedk-common{
+    width: 800px;
+  }
+  .comedk-about{
+    flex-direction: column;
+  }
+}
+
+
+@media(max-width: 900px){
+  .comedk-intro,.comedk-common{
+    width: 700px;
+  }
+}
+
+
+@media(max-width: 768px){
+ .comedk-intro,.comedk-common{
+    width: 550px;
+  } 
+}
+
+@media(max-width: 600px) {
+  .comedk{
+    padding-top: 100px;
+  }
+  .comedk-intro,.comedk-common{
+    width: 100%;
+    padding: 0 15px;
+  }
+  .comedk-intro{
+    text-align: center;
+  } 
+}
+
+@media(max-width: 380px) {
+ .comedk-intro h1{
+    font-size: 45px;
+  }
+  .comedk-common {
+    margin: 20px 0;
+  }
+  .comedk-common h1{
+    font-size: 30px;
+  }
+  .comedk-common h1:before{
+    font-size: 80px;
+    top: -64px;
+    left: -13px;
+  } 
+}
