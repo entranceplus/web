@@ -1,0 +1,160 @@
+.sec-head{
+	font-size: 45px;
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Merriweather', serif;
+}
+
+.section-common{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0;
+	background: #fcfcfc;
+}
+/*reversing mentorship*/
+#home-mentorship{
+  flex-direction: row-reverse;
+}
+
+#ranklist{
+  padding: 50px 0;
+}
+/*home-exam padding adjustment due to ranklist-featues*/
+#home-exam{
+  padding: 100px 0px 50px;
+}
+
+.section-common > div{
+  margin: 0 15px;
+}
+.sec-intro{
+  width: 400px;
+}
+.sec-blurb{
+  font-size: 30px;
+  font-weight: 300;
+}
+.sec-img{
+  display: flex;
+  align-items: center;
+}
+.sec-btn{
+  display: inline-block;
+  color: white;
+  padding: 11px 25px;
+  background: #63c96e;
+  font-weight: 300;
+  font-size: 18px;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px 1px #369a40;
+}
+
+
+
+@media(max-width: 1080px){
+	.section-common,
+  #home-mentorship{    /*overriding for #home-mentorship on top*/
+  	flex-direction: column;
+	}
+  
+  /*aligning right*/
+  #home-mentorship .sec-intro{
+    text-align: right;
+  }
+
+  /*Removing padding from top*/
+  #ranklist{
+    padding-top: 0;
+  }
+	.ranklist-features{
+		width: 600px;
+		margin: 0 auto;
+	}
+	.section-common > div{
+		margin: 0;
+	}
+	.section-common .sec-img{
+		margin-top: 30px;
+	}
+	.sec-intro{
+		width: 600px;
+	}
+
+  /*moving ranklist-features up by 30px(50px-30px = 20px)*/
+  .section-common.ranklist-intro{
+    padding-bottom: 20px;
+  }
+}
+
+
+
+@media(max-width: 768px){
+  .section-common{
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+  }
+  /*as aligning right in 1080px*/
+  #home-mentorship .sec-intro{
+    text-align: center;
+  }
+
+  #home-exam{
+    padding-top: 50px;
+  }
+
+  .section-common.ranklist-intro{
+    padding-top: 50px;
+  }
+
+  .sec-intro{
+    width: 600px;
+  }
+  .sec-blurb{
+    font-size: 25px;
+  }
+  .sec-btn{
+    display: none;
+  }
+  .section-common .sec-img{
+    margin-top: 0;
+  }
+}
+
+
+@media(max-width: 615px){
+  .sec-intro{
+    width: 100%;
+  }
+  .sec-img img{
+    width: 100%;
+  }
+  .section-common > div{
+    padding: 0 15px;
+  } 
+}
+
+
+@media(max-width: 600px) {
+  .f-c-common-head, .sec-head{
+    font-size: 35px;
+  }
+  .section-common{
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+
+  /*Adjusting padding 25px up down*/
+  .section-common.ranklist-intro{
+    padding: 0;
+  }
+  #ranklist,#home-exam{
+    padding: 25px 0;
+  }
+
+  .sec-blurb{
+    font-size: 22px;
+  }
+}
