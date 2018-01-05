@@ -204,33 +204,10 @@
   </section>
 </section>
 
+<!-- build:js js/main.js -->
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCiI4z4n7ql1C_PW3XhojtH2a--5kqh6aA",
-    authDomain: "fir-ep.firebaseapp.com",
-    databaseURL: "https://fir-ep.firebaseio.com",
-    projectId: "fir-ep",
-    storageBucket: "",
-    messagingSenderId: "588592635692"
-  };
-  firebase.initializeApp(config);
-</script>
-
-<script type="text/javascript">
-  const header = document.getElementById('header');
-  const hamburger = header.querySelector('.hamburger');
-  const links = header.querySelector('.nav-links');
-  const close = header.querySelector('.close-btn');
-  hamburger.addEventListener('click', function(){
-    links.classList.add('nav-open');
-    close.classList.add('close-hamburger');
-  });
-  close.addEventListener('click', function(){
-    links.classList.remove('nav-open');
-    close.classList.remove('close-hamburger');
-  });
-</script>
+<script type="text/javascript" src="js/firebase.js"></script>
+<script type="text/javascript" src="js/hamburger.js"></script>
+<!-- endbuild -->
 </body>
 </html>
