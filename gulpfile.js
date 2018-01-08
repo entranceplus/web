@@ -82,7 +82,12 @@ gulp.task('imagemin', function () {
 		.pipe(gulp.dest('dist/images'))
 });
 
+gulp.task('copy', function () {
+	  gulp.src(['./src/robots.txt'])
+		    .pipe(gulp.dest('dist'));
+});
+
 //build for production
 gulp.task('build', function (callback) {
-	runSequence('clean:dist', ['useref', 'imagemin'], callback)
+	runSequence('clean:dist', ['useref', 'imagemin'], 'copy', callback)
 });
