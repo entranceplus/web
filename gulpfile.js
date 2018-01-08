@@ -68,7 +68,9 @@ gulp.task('useref', function () {
 				add: true
 			}
 		})))
-		.pipe(gulpIf('*.js', uglify()))
+		.pipe(gulpIf('*.js', uglify().on('error', function (e) {
+			console.log(e);
+		})))
 		.pipe(versionNo(versionConfig))
 		.pipe(gulp.dest('dist'))
 });
