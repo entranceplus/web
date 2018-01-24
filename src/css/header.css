@@ -69,10 +69,8 @@
   position: absolute;
   flex-direction: column;
   align-items: flex-start;
-  background: #8cabcb;
-  padding: 5px;
+  background: white;
   border-radius: 3px;
-  color: white;
 }
 .dropdown-menu > li{
   width: 100%;
@@ -80,19 +78,53 @@
 /*overriding #header a*/
 #header .dropdown-menu a{
   font-size: 17px;
+  color: #56b96b;
 }
 .dropdown-menu a{
   width: 100%;
   display: inline-block;
-  padding: 5px;
-  border-radius: 3px;
+  padding: 10px;
   position: relative;
 }
 .dropdown-menu a:hover{
-  background: #5b7896;
+  background: #56b96b;
+}
+#header .dropdown-menu a:hover {
+  color: white;
 }
 .dropdown:hover > .dropdown-menu{
   display: flex;
+}
+
+/* nested dropdown */
+.dropdown-menu > li {
+  border-bottom: 1px solid #dce4ec;
+}
+.dropdown-menu > li:last-child {
+  border-bottom: none;
+}
+.dropdown-menu > li:first-child > a:hover{
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.dropdown-menu > li:last-child > a:hover{
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.dropdown-child {
+  display: none;
+}
+.dropdown-child a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.engineer-navlinks:hover > ul.dropdown-child,
+.medical-navlinks:hover > ul.dropdown-child {
+  display: block;
+  position: absolute;
+  left: 113px;
+  top: 0px;
 }
 
 
