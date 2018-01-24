@@ -1,0 +1,156 @@
+.blog-post-wrapper {
+	background: #ebf1f7;
+}
+
+.blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	padding: 150px 0 150px;	
+  background: linear-gradient(to right, #4372b9, #56ba70);
+}
+
+.blog > div {
+	text-align: center;
+	width: 700px;
+	font-size: 22px;
+	font-weight: 200;
+	color: white;
+}
+.blog > div span {
+	font-weight: 600;
+	border-bottom: 1px dashed white;
+}
+
+.blog-post {
+	display: flex;
+	flex-wrap: wrap;
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	top: -100px;
+}
+
+.post {
+	display: flex;
+	margin: 16px;
+	flex: 0 0 300px;
+	background: white;
+	flex-direction: column;
+	border-radius: 6px;
+	box-shadow: 0px 2px 19px -5px #c1cad2;
+	transition: all 0.2s ease-in-out;
+}
+.post-1 {
+	flex: 1 1 100%;
+}
+.post-1 a{
+	display: flex;
+	flex: 1 1 100%;
+	flex-direction: row;
+}
+.post:hover {
+	box-shadow: 0px 2px 10px -5px #c1cad2;
+	transform: translateY(-3px);
+}
+
+.post img {
+	display: flex;
+	border-radius: 6px 6px 0 0;
+}
+.post-1 img {
+	border-radius: 6px 0 0 6px;
+}
+
+.blog-about {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.blog-title {
+	font-size: 30px;
+	font-weight: 600;
+	font-family: 'Merriweather', serif;
+	margin: 0;
+}
+
+.blog-content {
+	font-family: 'Merriweather', serif;
+	font-size: 17px;
+	font-weight: 200;
+	line-height: 26px;
+}
+
+.blog-date {
+	color: #656262;
+	font-weight: 100;
+	margin-bottom: 0;
+}
+
+@media(max-width: 1080px) {
+	.blog > div {
+		width: 550px;
+	}
+
+	.blog-post {
+		width: 700px;
+	}
+	.post-1 .post-img {
+		overflow: hidden;
+	}
+	.post-1 .blog-about {
+		flex: 1 1 470px;
+	}
+	.post {
+    margin: 17px;
+	}
+	.post img {
+		width: 316px;
+	}
+	.post-1 img {
+    width: 500px;
+	}
+}
+
+@media(max-width: 768px) {
+	.blog > div {
+		width: 500px;
+	}
+	.blog-post {
+		width: 668px;
+	}
+	.post-1 {
+		flex-direction: column;
+    margin: 17px;
+		flex: 0 0 300px;
+	}
+	.post-1 a {
+		flex-direction: column;
+	}
+	.post-1 img,.post img {
+		width: 300px;
+		border-radius: 6px 6px 0 0;
+	}
+	.post-1 .blog-about {
+		flex: auto;
+	}
+}
+
+@media(max-width: 668px) {
+	.blog > div {
+		width: 100%;
+		padding: 0 15px;
+	}
+	.blog-post {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media(max-width: 400px) {
+	.post {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
