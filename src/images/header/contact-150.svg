@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="159px" height="150px" viewBox="0 0 159 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>speech-bubble</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(-89.000000, -472.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="speech-bubble" transform="translate(89.000000, 472.000000)">
+                <polygon id="Shape" points="50 45 50 124.893813 117.764435 124.893813 142.23061 150 142.23061 124.893813 159 124.893813 159 45"></polygon>
+                <polygon id="Shape" points="109 36.0143555 109 0 0 0 0 79.8938131 16.7693905 79.8938131 16.7693905 105 38.0634921 83.1488646 38.0634921 46.6668639 38.0634921 36.0143555 48.4444444 36.0143555"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
