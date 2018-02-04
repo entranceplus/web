@@ -131,7 +131,20 @@
   .list a {
     margin-bottom: 18px;
     width: 50%;
+  }
+  .list .list-content {
+    display: none;
+  }
+  .list .list-content.list-open {
+    display: flex;
+  }
+  .list-heading p,
+  .list-heading p:first-child {
+    font-size: 22px;
   } 
+  .list .list-content span {
+    font-size: 17px;
+  }
 }
 
 

@@ -12,3 +12,16 @@ close.addEventListener('click', function () {
 	close.classList.remove('close-hamburger');
 	document.body.style.overflow = "auto";
 });
+
+// exam list on small screen
+var list_heading = document.querySelectorAll('.list-heading');
+var sibling1, sibling2;
+list_heading.forEach(function(i){
+	i.addEventListener('click', function(){
+		sibling1 = this.nextElementSibling;
+		sibling2 = sibling1.nextElementSibling;
+		console.log(sibling1, sibling2);
+		sibling1.classList.toggle('list-open');
+		sibling2.classList.toggle('list-open');
+	});
+});
