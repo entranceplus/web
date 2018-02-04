@@ -179,7 +179,8 @@
   .footer-phone, .footer-whatsapp{
     position: relative;
   }
-  .footer-phone:before, .footer-whatsapp:before{
+  .footer-phone.phone-pop:before, .footer-whatsapp.whatsapp-pop:before{
+    opacity: 1;
     content: 'Click to call';
     color: white;
     position: absolute;
@@ -194,11 +195,12 @@
     border-radius: 3px;
     background: rgba(0,0,0,0.8);
   }
-  .footer-whatsapp:before{
+  .footer-whatsapp.whatsapp-pop:before{
     content: 'Click to whatsapp';
     top: 40px;
   }
-  .footer-phone:after, .footer-whatsapp:after{
+  .footer-phone.phone-pop:after, .footer-whatsapp.whatsapp-pop:after{
+    opacity: 1;
     content: '';
     position: absolute;
     left: 80px;
@@ -207,7 +209,7 @@
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
   }
-  .footer-whatsapp:after{
+  .footer-whatsapp.whatsapp-pop:after{
     border-bottom: 9px solid rgba(0,0,0,0.8);
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
