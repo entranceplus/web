@@ -1,5 +1,5 @@
 #home-landing{
-  padding: 150px 0 80px;
+  padding: 170px 0 80px;
   background: #55718e;
   display: flex;
   justify-content: center;
@@ -15,22 +15,11 @@
 /*avatar*/
 .avatar{
   position: relative;
+  width: 420px;
 }
 .avatar img{
-  width: 420px;
+  width: 100%;
   animation: move-up-down 3s ease-in-out infinite;
-}
-.avatar:after{
-  content: '';
-  position: absolute;
-  bottom: -50px;
-  left: 80px;
-  width: 200px;
-  height: 60px;
-  background: #4a637e;
-  border-radius: 50%;
-  box-shadow: 0 2px 2px 0 #364c63;
-  animation: shadow 3s ease-in-out infinite;
 }
 @keyframes move-up-down{
   0%{
@@ -43,10 +32,38 @@
     transform: translateY(0px);
   }
 }
+.avatar img.avatar-top {
+  position: absolute;
+  top: -75px;
+  animation: avatarTop 3s ease-in-out infinite;
+}
+@keyframes avatarTop{
+  0%{
+    transform: translateY(-30px);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(-30px);
+  }
+}
+.avatar:after{
+  content: '';
+  position: absolute;
+  bottom: -65px;
+  left: 107px;
+  width: 200px;
+  height: 60px;
+  background: #4a637e;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px 0 #364c63;
+  animation: shadow 3s ease-in-out infinite;
+}
 @keyframes shadow{
   50%{
     width: 150px;
-    left: 100px;
+    left: 127px;
   }
   100%{
     width: 200px;
@@ -83,6 +100,9 @@
   .avatar{
     margin: 0 15px;
   }
+  .avatar img {
+    width: 420px;
+  }
 }
 
 
@@ -99,13 +119,13 @@
     text-align: center;
     width: 670px;
   }
+  .mob-landing-content h1 {
+    margin-bottom: 95px;
+  }
 
   /*avatar*/
   .avatar{
     margin-top: 30px;
-  }
-  .avatar img{
-    width: 400px;
   }
 
   /*landing content*/
@@ -153,19 +173,23 @@
   }
   .avatar:after{
     width: 40%;
-    left: 25%;
+    left: 29%;
   }
   @keyframes shadow{
     50%{
-      width: 28%;
-      left: 31%;
+      width: 30%;
+      left: 34%;
     }
     100%{
       width: 40%;
     }
   }
-  .avatar img{
+  .avatar {
     width: 80%;
+    max-width: 420px;    
+  }
+  .avatar img {
+    width: 100%;
   }
   
   /*landing content  */
