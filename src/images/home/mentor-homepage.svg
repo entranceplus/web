@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="455px" height="287px" viewBox="0 0 455 287" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>mentor-side</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-106.000000, -13.000000)">
+            <g id="mentor-side" transform="translate(26.000000, 13.000000)">
+                <g id="clouds" transform="translate(494.000000, 108.000000)" fill-rule="nonzero" fill="#9ACFF7">
+                    <path d="M34.3841055,26 C38.0379902,26 41,22.9275838 41,19.1376061 C41,15.8819579 38.8134668,13.1577323 35.8810059,12.4538757 C35.8210273,5.56531768 30.4196777,0 23.7643047,0 C19.1950469,0 15.217166,2.62347296 13.1525117,6.49709288 C12.5242988,6.21510171 11.8318633,6.05811695 11.103873,6.05811695 C8.48131445,6.05811695 6.31688281,8.08654288 5.98551953,10.713006 C2.57299023,11.4148691 0,14.5364573 0,18.2821636 C0,22.5446738 3.33133008,26 7.44061914,26 C8.58525586,26 33.5999004,26 34.3841055,26 Z" id="Shape"></path>
+                </g>
+                <g id="plant" transform="translate(426.000000, 193.000000)">
+                    <ellipse id="Oval-3" fill="#4FD888" fill-rule="nonzero" cx="13" cy="23.7356322" rx="13" ry="23.7356322"></ellipse>
+                    <path d="M13,12.4712644 L13,69.603367" id="Line-6" stroke="#267E4B" stroke-linecap="square"></path>
+                    <path d="M13,20.5172414 L22.2258065,14.0804598" id="Line-7" stroke="#267E4B" stroke-linecap="square"></path>
+                    <path d="M12.1612903,30.9770115 L4.61290323,23.7356322" id="Line-8" stroke="#267E4B" stroke-linecap="square"></path>
+                </g>
+                <g id="plant" transform="translate(80.000000, 226.000000)">
+                    <ellipse id="Oval-3" fill="#4FD888" fill-rule="nonzero" cx="11.5" cy="21.5" rx="11.5" ry="21.5"></ellipse>
+                    <path d="M12,11 L12,62" id="Line-6" stroke="#31AD65" stroke-linecap="square"></path>
+                    <path d="M12,19 L20,13" id="Line-7" stroke="#31AD65" stroke-linecap="square"></path>
+                    <path d="M11,28 L4,21" id="Line-8" stroke="#31AD65" stroke-linecap="square"></path>
+                </g>
+                <g id="clouds" transform="translate(305.000000, 0.000000)" fill-rule="nonzero" fill="#9ACFF7">
+                    <path d="M59.5432071,42 C65.870666,42 71,37.0368662 71,30.9145944 C71,25.6554706 67.2135644,21.2547984 62.1354004,20.1177992 C62.0315351,8.99012855 52.6779785,0 41.1528203,0 C33.2402032,0 26.3516778,4.23791786 22.7763008,10.4953039 C21.6884199,10.0397797 20.4893242,9.78618892 19.2286582,9.78618892 C14.6871543,9.78618892 10.9389922,13.062877 10.365168,17.3056252 C4.45566601,18.439404 0,23.4819695 0,29.5327259 C0,36.4183194 5.76888867,42 12.8849746,42 C14.8671504,42 58.1851933,42 59.5432071,42 Z" id="Shape"></path>
+                </g>
+                <g id="cloud-(1)" transform="translate(356.000000, 255.000000)" fill-rule="nonzero" fill="#5CBB65">
+                    <path d="M51.4634467,19.0664704 C51.7242863,17.9234174 51.8627246,16.7317857 51.8627246,15.5067563 C51.8627246,6.94260231 45.1216977,0 36.8063181,0 C28.7949368,0 22.2460019,6.44442936 21.7777407,14.5742912 C20.1158912,12.9416879 17.8669169,11.937448 15.3890595,11.937448 C11.0824953,11.937448 7.46293443,14.9651056 6.4266516,19.066349 C6.4266516,19.066349 0,20.5596534 0,26.5331138 C0,32.5065742 2.23305507,34 3.19929329,34 L54.8008246,34 C55.766827,34 58,32.5066956 58,26.5332352 C58,20.5597748 51.4634467,19.0664704 51.4634467,19.0664704 Z" id="Shape"></path>
+                </g>
+                <g id="Group-2" transform="translate(184.000000, 108.000000)" fill-rule="nonzero">
+                    <rect id="Rectangle-2" fill="#E7A66A" x="31" y="66" width="124" height="101"></rect>
+                    <g id="Group">
+                        <polygon id="Triangle" fill="#B67334" points="96 0 192 66.0763521 0 66.0763521"></polygon>
+                        <polygon id="Triangle" fill="#E7A66A" points="96.5549133 13.2152704 154.265896 52.8610817 38.8439306 52.8610817"></polygon>
+                    </g>
+                    <rect id="Rectangle-3" fill="#B67334" x="31" y="66" width="13" height="100"></rect>
+                    <rect id="Rectangle-3" fill="#B67334" x="68" y="66" width="13" height="100"></rect>
+                    <rect id="Rectangle-3" fill="#B67334" x="104" y="66" width="13" height="100"></rect>
+                    <rect id="Rectangle-3" fill="#B67334" x="142" y="66" width="13" height="100"></rect>
+                    <rect id="Rectangle-4" fill="#A25622" x="26" y="66" width="26" height="10"></rect>
+                    <rect id="Rectangle-4" fill="#A25622" x="62" y="66" width="26" height="10"></rect>
+                    <rect id="Rectangle-4" fill="#A25622" x="99" y="66" width="26" height="10"></rect>
+                    <rect id="Rectangle-4" fill="#A25622" x="135" y="66" width="26" height="10"></rect>
+                    <rect id="Rectangle-4" fill="#A25622" x="62" y="156" width="26" height="10"></rect>
+                    <rect id="Rectangle-4" fill="#A25622" x="99" y="156" width="26" height="10"></rect>
+                    <rect id="Rectangle-4" fill="#A25622" x="137" y="156" width="26" height="10"></rect>
+                    <rect id="Rectangle-4" fill="#A25622" x="26" y="157" width="26" height="10"></rect>
+                    <rect id="Rectangle" fill="#72460E" x="14" y="166" width="161" height="14"></rect>
+                    <ellipse id="Oval" fill="#A25622" cx="97.5" cy="33" rx="8.5" ry="8"></ellipse>
+                </g>
+                <g id="triangle-bush" transform="translate(117.000000, 210.000000)" fill-rule="nonzero">
+                    <polygon id="Triangle-3" fill="#56D844" points="47.5 15 66 76 29 76"></polygon>
+                    <polygon id="Triangle-3" fill="#3DAB2E" points="24 0 48 77 0 77"></polygon>
+                    <polygon id="Triangle-3" fill="#4AB93B" points="64 25 80 77 48 77"></polygon>
+                </g>
+                <g id="cloud-(1)" transform="translate(401.000000, 255.000000)" fill-rule="nonzero" fill="#4CD186">
+                    <path d="M51.4634467,19.0664704 C51.7242863,17.9234174 51.8627246,16.7317857 51.8627246,15.5067563 C51.8627246,6.94260231 45.1216977,0 36.8063181,0 C28.7949368,0 22.2460019,6.44442936 21.7777407,14.5742912 C20.1158912,12.9416879 17.8669169,11.937448 15.3890595,11.937448 C11.0824953,11.937448 7.46293443,14.9651056 6.4266516,19.066349 C6.4266516,19.066349 0,20.5596534 0,26.5331138 C0,32.5065742 2.23305507,34 3.19929329,34 L54.8008246,34 C55.766827,34 58,32.5066956 58,26.5332352 C58,20.5597748 51.4634467,19.0664704 51.4634467,19.0664704 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
