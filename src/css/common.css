@@ -179,8 +179,8 @@
     font-size: 35px;
   }
   .section-common{
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 
 
@@ -189,7 +189,7 @@
     padding: 0;
   }
   #ranklist,#home-exam{
-    padding: 25px 0;
+    padding: 40px 0;
   }
 
   .sec-blurb{
