@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="558px" height="276px" viewBox="0 0 558 276" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="131.5" cy="183.5" r="66.5"></circle>
+        <filter x="-10.5%" y="-9.8%" width="121.1%" height="121.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.630022321   0 0 0 0 0.630022321   0 0 0 0 0.630022321  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-3" cx="264.5" cy="82.5" r="66.5"></circle>
+        <filter x="-10.5%" y="-9.8%" width="121.1%" height="121.1%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.630022321   0 0 0 0 0.630022321   0 0 0 0 0.630022321  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-5" cx="396.5" cy="183.5" r="66.5"></circle>
+        <filter x="-10.5%" y="-9.8%" width="121.1%" height="121.1%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.630022321   0 0 0 0 0.630022321   0 0 0 0 0.630022321  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-7" cx="382" cy="53" r="37"></circle>
+        <filter x="-18.9%" y="-17.6%" width="137.8%" height="137.8%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.630022321   0 0 0 0 0.630022321   0 0 0 0 0.630022321  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-9" cx="117.5" cy="52.5" r="52.5"></circle>
+        <filter x="-13.3%" y="-12.4%" width="126.7%" height="126.7%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.630022321   0 0 0 0 0.630022321   0 0 0 0 0.630022321  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-11" cx="265" cy="221" r="37"></circle>
+        <filter x="-18.9%" y="-17.6%" width="137.8%" height="137.8%" filterUnits="objectBoundingBox" id="filter-12">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.630022321   0 0 0 0 0.630022321   0 0 0 0 0.630022321  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-13" cx="490" cy="85" r="50"></circle>
+        <filter x="-14.0%" y="-13.0%" width="128.0%" height="128.0%" filterUnits="objectBoundingBox" id="filter-14">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.630022321   0 0 0 0 0.630022321   0 0 0 0 0.630022321  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-15" cx="32.5" cy="116.5" r="32.5"></circle>
+        <filter x="-21.5%" y="-20.0%" width="143.1%" height="143.1%" filterUnits="objectBoundingBox" id="filter-16">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.630022321   0 0 0 0 0.630022321   0 0 0 0 0.630022321  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-3" transform="translate(-23.000000, -6.000000)">
+            <g id="Group" transform="translate(32.000000, 14.000000)">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#E55959" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#5FCCDF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#8F63D7" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use fill="#38C99D" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                    <use fill="#2CC350" fill-rule="evenodd" xlink:href="#path-9"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                    <use fill="#31A7DC" fill-rule="evenodd" xlink:href="#path-11"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-14)" xlink:href="#path-13"></use>
+                    <use fill="#E9AC64" fill-rule="evenodd" xlink:href="#path-13"></use>
+                </g>
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-16)" xlink:href="#path-15"></use>
+                    <use fill="#98B1EC" fill-rule="evenodd" xlink:href="#path-15"></use>
+                </g>
+                <text id="IIT" font-family="Merriweather-Bold, Merriweather" font-size="36" font-weight="bold" letter-spacing="-0.328" fill="#FFFFFF">
+                    <tspan x="101.38" y="198">IIT</tspan>
+                </text>
+                <text id="AIIMS" font-family="Merriweather-Bold, Merriweather" font-size="36" font-weight="bold" letter-spacing="-0.492000014" fill="#FFFFFF">
+                    <tspan x="339.638" y="198">AIIMS</tspan>
+                </text>
+                <text id="NIT" font-family="Merriweather-Bold, Merriweather" font-size="24" font-weight="bold" letter-spacing="-0.328" fill="#FFFFFF">
+                    <tspan x="357.88" y="64">NIT</tspan>
+                </text>
+                <text id="CLAT" font-family="Merriweather-Bold, Merriweather" font-size="14" font-weight="bold" letter-spacing="-0.328" fill="#FFFFFF">
+                    <tspan x="246.186" y="227">CLAT</tspan>
+                </text>
+                <text id="BITS" font-family="Merriweather-Bold, Merriweather" font-size="20" font-weight="bold" letter-spacing="-0.273333341" fill="#FFFFFF">
+                    <tspan x="8.23666668" y="128">BITS</tspan>
+                </text>
+                <text id="AIPMT" font-family="Merriweather-Bold, Merriweather" font-size="24" font-weight="bold" letter-spacing="-0.328" fill="#FFFFFF">
+                    <tspan x="450.284" y="93">AIPMT</tspan>
+                </text>
+                <text id="COMEDK" font-family="Merriweather-Bold, Merriweather" font-size="24" font-weight="bold" letter-spacing="-0.328" fill="#FFFFFF">
+                    <tspan x="210.204" y="95">COMEDK</tspan>
+                </text>
+                <text id="NEET" font-family="Merriweather-Bold, Merriweather" font-size="24" font-weight="bold" letter-spacing="-0.328" fill="#FFFFFF">
+                    <tspan x="84.256" y="64">NEET</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
