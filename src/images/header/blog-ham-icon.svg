@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="138px" height="144px" viewBox="0 0 138 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(-205.000000, -246.000000)">
+            <g id="Group" transform="translate(205.000000, 246.000000)">
+                <path d="M13.5,35 L92.5,35" id="Line" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square"></path>
+                <path d="M12.5,52 L91.5,52" id="Line" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square"></path>
+                <path d="M13.5,71 L92.5,71" id="Line" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square"></path>
+                <path d="M12.5,87 L61,87" id="Line" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square"></path>
+                <rect id="Rectangle-4" stroke="#FFFFFF" stroke-width="4" x="2" y="2" width="110" height="140" rx="8"></rect>
+                <path d="M123,27 L123,18.3793103 C123,17.6175383 124.221042,17 125.727273,17 L135.272727,17 C136.778958,17 138,17.6175383 138,18.3793103 L138,27" id="Rectangle-3" fill="#FFFFFF"></path>
+                <rect id="Rectangle-2" fill="#FFFFFF" x="123" y="30" width="15" height="87"></rect>
+                <polygon id="Triangle" fill="#FFFFFF" transform="translate(130.500000, 128.500000) rotate(180.000000) translate(-130.500000, -128.500000) " points="130.5 121 138 136 123 136"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
