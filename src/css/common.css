@@ -40,16 +40,21 @@
   align-items: center;
 }
 .sec-btn{
-  display: inline-block;
-  color: white;
-  padding: 11px 25px;
-  background: #63c96e;
+  padding: 9px 20px;
+  margin-top: 20px;
+  background: #56ba78;
+  border-radius: 25px;
+  font-size: 20px;
   font-weight: 300;
-  font-size: 18px;
-  border-radius: 20px;
-  box-shadow: 0 1px 2px 1px #369a40;
+  color: white;
+  display: inline-block;
+  box-shadow: 0 2px 4px 0 #307f4a;
+  transition: all 0.2s ease-out;
 }
-
+.sec-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 9px 14px -5px #307f4a
+}
 /* management quota admission button on hero image and comedk page */
 .mq-button {
   font-size: 20px;

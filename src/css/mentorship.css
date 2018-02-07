@@ -94,22 +94,7 @@
   font-size: 22px;
   font-weight: 200;
 }
-.mentorship-start a{
-  padding: 9px 20px;
-  margin-top: 20px;
-  background: #56ba78;
-  border-radius: 25px;
-  font-size: 20px;
-  font-weight: 300;
-  color: white;
-  display: inline-block;
-  box-shadow: 0 2px 4px 0 #307f4a;
-  transition: all 0.2s ease-out;
-}
-.mentorship-start a:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 9px 14px -5px #307f4a
-}
+
 
 
 @media(max-width: 900px){
