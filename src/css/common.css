@@ -71,7 +71,6 @@
 }
 .mq-button:hover {
   box-shadow: 0 6px 6px -5px rgba(255,255,255,0.5);
-  transform: translateY(-3px);
 }
 .mq-button:hover img{
   animation: left-right 1s linear infinite;
@@ -194,5 +193,11 @@
 
   .sec-blurb{
     font-size: 22px;
+  }
+}
+
+@media(max-width: 380px) {
+  .mq-button {
+    width: 80%;
   }
 }
