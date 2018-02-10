@@ -26,7 +26,7 @@ list_heading.forEach(function(i){
 	});
 });
 
-//scroll events
+//scroll events - 1.phone, whatsapp 2.changing bg
 var scroll_flag = 0;
 window.addEventListener("scroll", function (e) {
 	e.preventDefault();
@@ -44,4 +44,12 @@ window.addEventListener("scroll", function (e) {
 		whatsapp[0].classList.remove('whatsapp-pop');
 		},4000);
 	}
+
+	//changing bg
+	var header = document.getElementById('header');
+	if(top > 25) {
+		header.classList.add('fixed-bg');
+	}
+	else
+		header.classList.remove('fixed-bg');
 }, false);
