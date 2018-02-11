@@ -174,46 +174,4 @@
     margin-top: 15px;
     margin-bottom: 30px;
   }
-
-  /*tooltip phone, whatsapp*/
-  .footer-phone, .footer-whatsapp{
-    position: relative;
-  }
-  .footer-phone.phone-pop:before, .footer-whatsapp.whatsapp-pop:before{
-    opacity: 1;
-    content: 'Click to call';
-    color: white;
-    position: absolute;
-    top: -30px;
-    left: 0;
-    width: 178px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 14px;
-    border-radius: 3px;
-    background: rgba(0,0,0,0.8);
-  }
-  .footer-whatsapp.whatsapp-pop:before{
-    content: 'Click to whatsapp';
-    top: 40px;
-  }
-  .footer-phone.phone-pop:after, .footer-whatsapp.whatsapp-pop:after{
-    opacity: 1;
-    content: '';
-    position: absolute;
-    left: 80px;
-    top: 4px;
-    border-top: 9px solid rgba(0,0,0,0.8);
-    border-left: 9px solid transparent;
-    border-right: 9px solid transparent;
-  }
-  .footer-whatsapp.whatsapp-pop:after{
-    border-bottom: 9px solid rgba(0,0,0,0.8);
-    border-left: 9px solid transparent;
-    border-right: 9px solid transparent;
-    border-top: none;
-    top: 31px;
-  }
 }

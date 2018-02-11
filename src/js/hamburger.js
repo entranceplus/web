@@ -26,26 +26,11 @@ list_heading.forEach(function(i){
 	});
 });
 
-//scroll events - 1.phone, whatsapp 2.changing bg
-var scroll_flag = 0;
+
+//changing bg
 window.addEventListener("scroll", function (e) {
 	e.preventDefault();
 	var top = this.scrollY;
-	var footer = document.getElementById("footer-contactus");
-	var phone = document.getElementsByClassName("footer-phone");
-	var whatsapp = document.getElementsByClassName("footer-whatsapp");
-	var footer_height = footer.offsetTop;
-	if (top+window.innerHeight-300 > footer_height && scroll_flag == 0) {
-		scroll_flag = 1;
-		phone[0].classList.add('phone-pop');
-		whatsapp[0].classList.add('whatsapp-pop');
-		setInterval(function(){
-		phone[0].classList.remove('phone-pop');
-		whatsapp[0].classList.remove('whatsapp-pop');
-		},4000);
-	}
-
-	//changing bg
 	var header = document.getElementById('header');
 	if(top > 25) {
 		header.classList.add('fixed-bg');
