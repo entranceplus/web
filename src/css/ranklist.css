@@ -17,7 +17,7 @@
   z-index: 1;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 700px) {
   /*hide ranklist features*/
   .ranklist-features{
     display: none;

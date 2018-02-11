@@ -41,7 +41,6 @@
 }
 .sec-btn{
   padding: 9px 20px;
-  margin-top: 20px;
   background: #56ba78;
   border-radius: 25px;
   font-size: 20px;
@@ -90,22 +89,31 @@
 
 
 @media(max-width: 1080px){
+  .section-common{
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+  }
+
 	.section-common,
   #home-mentorship{    /*overriding for #home-mentorship on top*/
   	flex-direction: column;
 	}
   
-  /*aligning right*/
-  #home-mentorship .sec-intro{
-    text-align: right;
-  }
-
   /*Removing padding from top*/
   #ranklist{
     padding-top: 0;
   }
+  /*moving ranklist-features up by 30px(50px-30px = 20px)*/
+  .section-common.ranklist-intro{
+    padding-bottom: 20px;
+  }
+  .section-common.ranklist-intro{
+    padding-top: 50px;
+  }
+
 	.ranklist-features{
-		width: 600px;
+		width: 700px;
 		margin: 0 auto;
 	}
 	.section-common > div{
@@ -115,18 +123,19 @@
 		margin-top: 30px;
 	}
 	.sec-intro{
-		width: 600px;
+		width: 700px;
 	}
 
-  /*moving ranklist-features up by 30px(50px-30px = 20px)*/
-  .section-common.ranklist-intro{
-    padding-bottom: 20px;
+  #home-mentorship .sec-intro{
+    text-align: center;
+  }
+
+  #home-exam{
+    padding-top: 50px;
   }
 }
 
-
-
-@media(max-width: 768px){
+@media(max-width: 1080px){
   .section-common{
     align-items: center;
     text-align: center;
@@ -144,7 +153,9 @@
   .section-common.ranklist-intro{
     padding-top: 50px;
   }
+}
 
+@media(max-width: 768px){
   .sec-intro{
     width: 600px;
   }
@@ -152,7 +163,7 @@
     font-size: 25px;
   }
   .sec-btn{
-    display: none;
+    margin-bottom: 30px;
   }
   .section-common .sec-img{
     margin-top: 0;
@@ -182,7 +193,6 @@
     padding-bottom: 55px;
   }
 
-
   /*Adjusting padding 25px up down*/
   .section-common.ranklist-intro{
     padding: 0;
@@ -193,6 +203,10 @@
 
   .sec-blurb{
     font-size: 22px;
+  }
+
+  .sec-btn {
+    font-size: 17px;
   }
 }
 
