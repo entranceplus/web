@@ -406,7 +406,7 @@
     top: auto;
     left: 0;
     flex-direction: row;
-    transform: translateY(100%);
+    transform: translateY(115%);
   }
   .dropdown:hover > .dropdown-menu {
     display: flex;
