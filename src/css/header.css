@@ -78,14 +78,25 @@
   align-items: flex-start;
   background: white;
   border-radius: 3px;
+  text-align: center;
+  box-shadow: 0 2px 1px 0 #c3c0c0;
+}
+.dropdown-menu h5 {
+  text-transform: uppercase;
+  color: #585858;
+  margin-bottom: 10px;
+}
+.dropdown-menu div p{
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .dropdown-menu > li{
   width: 100%;
 }
 /*overriding #header a*/
 #header .dropdown-menu a{
-  font-size: 17px;
-  color: #56b96b;
+  font-size: 16px;
+  color: #6a6969;
 }
 .dropdown-menu a{
   width: 100%;
@@ -104,7 +115,7 @@
 }
 
 /* nested dropdown */
-.dropdown-menu > li {
+/* .dropdown-menu > li {
   border-bottom: 1px solid #dce4ec;
 }
 .dropdown-menu > li:last-child {
@@ -132,7 +143,7 @@
   position: absolute;
   left: 113px;
   top: 0px;
-}
+} */
 
 
 /*creating arrow \/*/
@@ -203,7 +214,9 @@
   display: none;
 }
 
-
+.drop-arrow {
+  display: none;
+}
 
 @media(max-width: 1080px){
   #header{
@@ -215,10 +228,10 @@
   .nav-links{
     display: flex;
     position: fixed;
-    left: 0;
+    top: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     margin: 0;
@@ -227,12 +240,24 @@
     text-align: center;
     padding: 40px 0 5px;
     background: #272727;
-    transform: translateY(100%);
+    transform: translateX(100%);
     transition: transform 0.2s cubic-bezier(0, 0, 0.32, 1.12);
   }
   .nav-links.nav-open{
     transform: translate(0px);
   }
+
+  /* dropdown-menu */
+  .nav-links .dropdown-menu {
+    display: none;
+  }
+  .dropdown:hover > .dropdown-menu {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -114px;
+  }
+  
   /* bg overlay */
   .nav-links.nav-open ~ .hamburger:after {
     content: '';
@@ -241,58 +266,41 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(255,255,255,0.5);
+    background: rgba(75, 75, 75, 0.8);
     z-index: 100;
   }
+
   /* image in navlinks in small devices */
   .nav-links > li img {
     display: inline-block;
     height: 50px;
   }
   .nav-links > li{
-    margin: 5px;
+    margin: 10px 0px;
     width: 120px;
-    padding: 5px;
   }
   .nav-links a{
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .nav-links .mentor-btn a{
-    border: none;
-  }
+  /* title under the image in menu */
   .nav-links a span{
     color: white;
     font-size: 16px;
     margin-top: 10px;
     text-transform: uppercase;
   }
-  .nav-links .dropdown-menu {
+  
+  /* remove arrow \/ */
+  .dropdown > a:before, 
+  .dropdown > a:after {
     display: none;
   }
-
+  /* remove padding from dropdown as arrow removed*/
   .dropdown > a{
     padding: 0;
   }
-  .dropdown > a:before, .dropdown > a:after,
-  .nav-links > li:after {
-    display: none;
-  }
-  .dropdown-menu{
-    display: block;
-    position: static;
-    background: #e9fceb;
-  }
-
-  #header .dropdown-menu a{
-    color: #6a6969;
-    font-size: 16px;
-  }
-  .dropdown-menu a:hover {
-    background: #ffffff;
-  }
-
 
   /*hamburger*/
   .hamburger{
@@ -349,13 +357,25 @@
   .close-btn.close-hamburger{
     display: block;
   }
+
+  /* mentor button */
+  .nav-links .mentor-btn a{
+    border: none;
+  }
+  /* remove hover green mentor btn */
+  #header .mentor-btn a:hover {
+    background: transparent;
+  }
 }
+
 
 @media(max-width: 900px) {
   #header{
     height: 75px;
   }
 }
+
+
 @media(max-width: 600px) {
   #header{
     padding-left: 15px;
@@ -379,6 +399,44 @@
   .hamburger div{
     top: 3px;
     margin-left: 5px;
+  }
+
+  /* styling dropdown */
+  .nav-links {
+    top: auto;
+    left: 0;
+    flex-direction: row;
+    transform: translateY(100%);
+  }
+  .dropdown:hover > .dropdown-menu {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 10000;
+    background: white;
+  }
+  .dropdown-menu > div {
+    width: 100%;
+  }
+  .dropdown.remove-dropdown:hover > .dropdown-menu{
+    display: none;
+  }
+  /* arrow in dpropdown-menu */
+  div.drop-arrow {
+    display: inline-block;
+    transform: rotate(180deg);
+    width: 45px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  div.drop-arrow img {
+    width: 30px;
   }
 }
 

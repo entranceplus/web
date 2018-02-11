@@ -53,3 +53,15 @@ window.addEventListener("scroll", function (e) {
 	else
 		header.classList.remove('fixed-bg');
 }, false);
+
+
+//dropdown-menu
+var drop_arrow = document.querySelector('.drop-arrow');
+var dropdown = document.querySelector('.dropdown');
+var dropdown_a = document.querySelector('.dropdown > a');
+dropdown_a.addEventListener('click', function () {
+	dropdown.classList.remove('remove-dropdown');
+});
+drop_arrow.addEventListener('click', function(){
+	dropdown.classList.add('remove-dropdown');
+});
