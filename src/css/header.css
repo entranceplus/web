@@ -440,6 +440,11 @@
   }
 }
 
+@media(max-width: 480px) {
+  .nav-links {
+    align-items: center;
+  }
+}
 
 @media(max-width: 380px){
   /*logo*/
