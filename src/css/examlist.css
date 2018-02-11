@@ -111,7 +111,7 @@
     flex-wrap: wrap;
   }
   .list a {
-    margin-top: 18px;
+    margin-top: 30px;
     text-align: center;
   }
 }
@@ -143,13 +143,15 @@
   }
   .list-heading {
     font-weight: 400;
+    color: #4bbc4b;
   }
   .list-heading p,
   .list-heading p:first-child {
     font-size: 23px;
+    font-weight: 600;
+    font-family: 'Muli', sans-serif;
   } 
   .list-heading p:first-child {
-    font-family: 'Muli', sans-serif;
     font-size: 25px;
   }
   .list .list-content span {
