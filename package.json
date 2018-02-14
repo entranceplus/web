@@ -24,6 +24,7 @@
   "devDependencies": {
     "browser-sync": "^2.23.2",
     "del": "^3.0.0",
+    "firebase-tools": "^3.17.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-cache": "^1.0.2",
