@@ -20,8 +20,6 @@
   (routes
    (GET "/hello" [] (ok-response {:msg "Hello world!!"}))))
 
-
-
 (defn home-page []
   (selmer-response "public/index.html"))
 
@@ -37,10 +35,11 @@
     (selmer-response "public/exam-list.html" :data data)))
 
 
-
 (defn site [_]
   (routes
    (GET "/" [] (home-page))
    (GET "/ranklist/:type" [type] (list-page type))
    (GET "/entrance-exams" [] (list-page "entrance-exam"))
+   (GET "/blog" [] (selmer-response "public/blog.html"))
+   (GET "/mentorship" [] (selmer-response "public/mentorship.html"))
    (ANY "*" [] (home-page))))
