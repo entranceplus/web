@@ -22,61 +22,64 @@
 		</a>
 	</article>
 
+  {% for article in articles %}
 	<article class="post">
-		<a href="">
+		<a href="{{article.url}}">
 			<div class="post-img">
 				<img src="images/blog/blog-img.jpg" width="300"></img>
 			</div>
 			<div class="blog-about">
-				<h1 class="blog-title">Top 10 colleges for computer Science</h1>
-				<p class="blog-content">In the United States, "college" often refers to a constituent part of a university or to a degree-awarding tertiary educational
-					institution, but generally "college" and "university" are used interchangeably</p>
+				<h1 class="blog-title">{{ article.title }}</h1>
+        {% safe %}
+        <p class="blog-content">{{ article.content }}</p>
+        {% endsafe %}
 				<p class="blog-date">Jan 18, 2017</p>
 			</div>
 		</a>
 	</article>
+  {% endfor %}
 
-	<article class="post">
-		<a href="">
-			<div class="post-img">
-				<img src="images/blog/blog-img.jpg" width="300"></img>
-			</div>
-			<div class="blog-about">
-				<h1 class="blog-title">Top 10 colleges for computer Science</h1>
-				<p class="blog-content">In the United States, "college" often refers to a constituent part of a university or to a degree-awarding tertiary educational
-					institution, but generally "college" and "university" are used interchangeably</p>
-				<p class="blog-date">Jan 18, 2017</p>
-			</div>
-		</a>
-	</article>
+	<!-- <article class="post">
+		   <a href="">
+			 <div class="post-img">
+			 <img src="images/blog/blog-img.jpg" width="300"></img>
+			 </div>
+			 <div class="blog-about">
+			 <h1 class="blog-title">Top 10 colleges for computer Science</h1>
+			 <p class="blog-content">In the United States, "college" often refers to a constituent part of a university or to a degree-awarding tertiary educational
+			 institution, but generally "college" and "university" are used interchangeably</p>
+			 <p class="blog-date">Jan 18, 2017</p>
+			 </div>
+		   </a>
+	     </article>
 
-	<article class="post">
-		<a href="">
-			<div class="post-img">
-				<img src="images/blog/blog-img.jpg" width="300"></img>
-			</div>
-			<div class="blog-about">
-				<h1 class="blog-title">Top 10 colleges for computer Science</h1>
-				<p class="blog-content">In the United States, "college" often refers to a constituent part of a university or to a degree-awarding tertiary educational
-					institution, but generally "college" and "university" are used interchangeably</p>
-				<p class="blog-date">Jan 18, 2017</p>
-			</div>
-		</a>
-	</article>
+	     <article class="post">
+		   <a href="">
+			 <div class="post-img">
+			 <img src="images/blog/blog-img.jpg" width="300"></img>
+			 </div>
+			 <div class="blog-about">
+			 <h1 class="blog-title">Top 10 colleges for computer Science</h1>
+			 <p class="blog-content">In the United States, "college" often refers to a constituent part of a university or to a degree-awarding tertiary educational
+			 institution, but generally "college" and "university" are used interchangeably</p>
+			 <p class="blog-date">Jan 18, 2017</p>
+			 </div>
+		   </a>
+	     </article>
 
-	<article class="post">
-		<a href="">
-			<div class="post-img">
-				<img src="images/blog/blog-img.jpg" width="300"></img>
-			</div>
-			<div class="blog-about">
-				<h1 class="blog-title">Top 10 colleges for computer Science</h1>
-				<p class="blog-content">In the United States, "college" often refers to a constituent part of a university or to a degree-awarding tertiary educational
-					institution, but generally "college" and "university" are used interchangeably</p>
-				<p class="blog-date">Jan 18, 2017</p>
-			</div>
-		</a>	
-	</article>
+	     <article class="post">
+		   <a href="">
+			 <div class="post-img">
+			 <img src="images/blog/blog-img.jpg" width="300"></img>
+			 </div>
+			 <div class="blog-about">
+			 <h1 class="blog-title">Top 10 colleges for computer Science</h1>
+			 <p class="blog-content">In the United States, "college" often refers to a constituent part of a university or to a degree-awarding tertiary educational
+			 institution, but generally "college" and "university" are used interchangeably</p>
+			 <p class="blog-date">Jan 18, 2017</p>
+			 </div>
+		   </a>	
+	     </article> -->
 </section>
 </div>
 

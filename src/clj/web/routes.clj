@@ -1,7 +1,8 @@
 (ns web.routes
   (:require [compojure.core :refer [routes GET ANY]]
             [ring.util.http-response :as response]
-            [selmer.parser :as selmer]))
+            [selmer.parser :as selmer]
+            [voidwalker.content :as content]))
 
 (defn ok-response [response]
   (-> (response/ok response)
@@ -34,12 +35,21 @@
                                 :subtitle "All the Entrance Exams on your fingertips now. We have mentioned all the important exams and their dates below alone with their cutoffs and the level on which the exam is held."})]
     (selmer-response "public/exam-list.html" :data data)))
 
-
-(defn site [_]
+(defn site [{db :void-db}]
   (routes
    (GET "/" [] (home-page))
    (GET "/ranklist/:type" [type] (list-page type))
    (GET "/entrance-exams" [] (list-page "entrance-exam"))
-   (GET "/blog" [] (selmer-response "public/blog.html"))
+   (GET "/blog" [] (selmer-response "public/blog.html"
+                                    :data {:articles (map (fn [{:keys [url] :as post}]
+                                                            (assoc post :url (str "/content/" url)))
+                                                          (content/get-post db))}))
    (GET "/mentorship" [] (selmer-response "public/mentorship.html"))
+   (GET "/content/:url" [url] (selmer-response "public/article.html"
+                                               :data (content/get-post db :url url)))
    (ANY "*" [] (home-page))))
+
+;; next steps
+;; transcriptor for testing apis
+;; setup test suite for each libraries
+;; test and deploy snapshot for each lib via circleci

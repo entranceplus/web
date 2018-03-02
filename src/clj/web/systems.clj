@@ -1,6 +1,7 @@
 (ns web.systems
   (:require [com.stuartsierra.component :as component]
             [environ.core :refer [env]]
+            [snow.db :as db]
             [web.routes :refer [hello-routes site]]
             [ring.middleware.format :refer [wrap-restful-format]]
             [ring.middleware.defaults :refer [wrap-defaults
@@ -17,6 +18,10 @@
              [postgres :refer [new-postgres-database]]
              [handler :refer [new-handler]])))
 
+(do
+  (require '[pyro.printer :as printer])
+  (printer/swap-stacktrace-engine!))
+
 (def rest-middleware
   (fn [handler]
     (wrap-restful-format handler
@@ -26,9 +31,13 @@
 (defn dev-system []
     (component/system-map
      :site-endpoint (component/using (new-endpoint site)
-                                     [:site-middleware])
+                                     [:site-middleware :void-db])
      :api-endpoint (component/using (new-endpoint hello-routes)
                                     [:api-middleware])
+     :void-db (new-postgres-database (db/get-db-spec-from-env :config {:dbuser "void"
+                                                                       :db "voidwalker"
+                                                                       :password "walker"
+                                                                       :host "localhost"}))
      :site-middleware (new-middleware {:middleware [[wrap-defaults site-defaults]]})
      :api-middleware (new-middleware
                       {:middleware  [rest-middleware
@@ -36,6 +45,7 @@
      :handler (component/using (new-handler) [:api-endpoint :site-endpoint])
      :api-server (component/using (new-immutant-web :port (Integer. (env :http-port)))
                                   [:handler])))
+
 
 (defn prod-system
   "Assembles and returns components for a production deployment"

@@ -2,7 +2,8 @@
 (def version "0.1.0-SNAPSHOT")
 
 (set-env! :resource-paths #{"src/cljs" "src/clj" "resources"}
-          :checkouts '[[snow "0.1.0-SNAPSHOT"]]
+          :checkouts '[[snow "0.1.0-SNAPSHOT"]
+                       [voidwalker "0.1.0-SNAPSHOT"]]
           :dependencies   '[[org.clojure/clojure "1.9.0"]
                             [org.clojure/clojurescript "1.9.946"]
                             [org.immutant/immutant "2.1.9"]
@@ -13,8 +14,10 @@
                             [metosin/ring-http-response "0.9.0"]
                             [selmer "1.11.7"]
                             [snow "0.1.0-SNAPSHOT"]
+                            [voidwalker "0.1.0-SNAPSHOT"]
                             [compojure "1.6.0"]
                             [environ "1.1.0"]
+                            [venantius/pyro "0.1.1"]
                             [boot-environ "1.1.0"]
                             [ring "1.6.3"]
                             [org.clojure/tools.nrepl "0.2.12"]
