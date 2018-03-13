@@ -50,6 +50,8 @@
 
 (task-options!
  aot {:namespace   #{'web.core}}
+ pom {:project project
+      :version version}
  jar {:main        'web.core
       :file        (str "web-" version "-standalone.jar")})
 
@@ -73,6 +75,13 @@
   [d dir PATH #{str} "the set of directories to write to (target)."]
   (let [dir (if (seq dir) dir #{"target"})]
     (comp (aot) (pom) (uber) (jar) (target :dir dir))))
+
+(deftask lib-install
+  "install as lib"
+  []
+  (comp (pom)
+        (jar)
+        (install)))
 
 (deftask run-project
   "Run the project."
