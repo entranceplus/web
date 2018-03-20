@@ -30,8 +30,8 @@
                          :response-options {:json-kw {:pretty true}})))
 
 (defn system-config [config]
-  [:site-endpoint (component/using (new-endpoint site
-                                     [:site-middleware :void-db]))
+  [:site-endpoint (component/using (new-endpoint site)
+                                   [:site-middleware :void-db])
    :api-endpoint (component/using (new-endpoint hello-routes)
                                   [:api-middleware])
    :void-db (new-postgres-database (db/get-db-spec-from-env :config config))
@@ -40,7 +40,10 @@
                     {:middleware  [rest-middleware
                                    [wrap-defaults api-defaults]]})
    :handler (component/using (new-handler) [:api-endpoint :site-endpoint])
-   :api-server (component/using (new-immutant-web :port (config :http-port))
+   :api-server (component/using (new-immutant-web :port (let [port (config :http-port)]
+                                                          (cond-> port
+                                                            (string? port) Integer.)))
+
                                 [:handler])])
 
 (defn dev-system []

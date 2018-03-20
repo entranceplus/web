@@ -16,21 +16,20 @@
 ## How is the repo structured?
 The project uses [boot](http://boot-clj.com/) for managing dev environ.
 
-## Setup 
+## Setup
 
 1. [Install boot](https://github.com/boot-clj/boot#install)
-2. Run `boot dev` in terminal.
-3. Website should be available at `http://localhost:7000`
-
-Changes to html may not be reflected in the browser. 
-This is a bug (to be resolved soon).
+2. [Install docker](https://docs.docker.com/install/#supported-platforms)
+3. Run `docker run -t shakdwipeea/voidwalker-db`
+4. Run `boot dev` in terminal.
+5. Website should be available at `http://localhost:6100`
 
 
 ## Directory structure
 
-All the static files are available in resources/public. `base.html` is the base 
-html file shared on all pages. 
- 
+All the static files are available in resources/public. `base.html` is the base
+html file shared on all pages.
+
 To get an idea of available links go through `src/clj/web/routes.clj`
 
 ## Authors

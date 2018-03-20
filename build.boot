@@ -59,16 +59,19 @@
      "run a restartable system"
      []
      (comp
-      (environ :env {:http-port "7000"})
+      (environ :env {:http-port "6100"
+                     :dbname "voidwalker"
+                     :dbuser "void"
+                     :dbpassword "walker"})
       (watch :verbose true)
       (system :sys #'dev-system
               :auto true
               :files ["routes.clj" "systems.clj"])
       (repl :server true
             :host "127.0.0.1")
-      (reload :asset-path "public")
-      (cljs-repl)
-      (cljs :source-map true :optimizations :none)))
+      (reload :asset-path "public")))
+      ; (cljs-repl)
+      ; (cljs :source-map true :optimizations :none)))
 
 (deftask build
   "Build the project locally as a JAR."
