@@ -13,6 +13,7 @@
                             [org.clojure/tools.logging "0.4.0"]
                             [metosin/ring-http-response "0.9.0"]
                             [selmer "1.11.7"]
+                            [proto-repl "0.3.1"]
                             [snow "0.1.0-SNAPSHOT"]
                             [voidwalker "0.1.0-SNAPSHOT"]
                             [compojure "1.6.0"]
@@ -59,7 +60,7 @@
      "run a restartable system"
      []
      (comp
-      (environ :env {:http-port "6100"
+      (environ :env {:http-port "7000"
                      :dbname "voidwalker"
                      :dbuser "void"
                      :dbpassword "walker"})
@@ -68,7 +69,8 @@
               :auto true
               :files ["routes.clj" "systems.clj"])
       (repl :server true
-            :host "127.0.0.1")
+            :port 7001
+            :bind "0.0.0.0")
       (reload :asset-path "public")))
       ; (cljs-repl)
       ; (cljs :source-map true :optimizations :none)))

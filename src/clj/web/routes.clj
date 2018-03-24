@@ -17,6 +17,7 @@
       response/ok
       (response/header "Content-Type" "text/html; charset=utf-8")))
 
+
 (defn hello-routes [_]
   (routes
    (GET "/hello" [] (ok-response {:msg "Hello world!!"}))))
@@ -35,15 +36,28 @@
                                 :subtitle "All the Entrance Exams on your fingertips now. We have mentioned all the important exams and their dates below alone with their cutoffs and the level on which the exam is held."})]
     (selmer-response "public/exam-list.html" :data data)))
 
+(defn get-all-articles [void-db]
+  (map (fn [{:keys [url] :as post}]
+          (assoc post :url (str "/content/" url)))
+       (content/get-post void-db)))
+
+(defn get-blog-data [void-db]
+  (let [articles (get-all-articles void-db)]
+    {:articles articles
+     :banner (first articles)}))
+;
+; (def void-db (:void-db system.repl/system))
+; (get-all-articles void-db)
+; (get-blog-data void-db)
+
+
 (defn site [{db :void-db}]
   (routes
    (GET "/" [] (home-page))
    (GET "/ranklist/:type" [type] (list-page type))
    (GET "/entrance-exams" [] (list-page "entrance-exam"))
    (GET "/blog" [] (selmer-response "public/blog.html"
-                                    :data {:articles (map (fn [{:keys [url] :as post}]
-                                                            (assoc post :url (str "/content/" url)))
-                                                          (content/get-post db))}))
+                                    :data (get-blog-data db)))
    (GET "/mentorship" [] (selmer-response "public/mentorship.html"))
    (GET "/content/:url" [url] (selmer-response "public/article.html"
                                                :data (content/get-post db :url url)))

@@ -40,10 +40,7 @@
                     {:middleware  [rest-middleware
                                    [wrap-defaults api-defaults]]})
    :handler (component/using (new-handler) [:api-endpoint :site-endpoint])
-   :api-server (component/using (new-immutant-web :port (let [port (config :http-port)]
-                                                          (cond-> port
-                                                            (string? port) Integer.)))
-
+   :api-server (component/using (new-immutant-web :port (system/get-port config))
                                 [:handler])])
 
 (defn dev-system []
