@@ -1,0 +1,124 @@
+
+
+{% extends "public/base.html" %}
+
+{% block content %}
+<!-- HERO IMAGE -->
+<section id="home-landing">
+    <div class="mob-landing-content">
+        <h1>Ultimate guide to Undergraduate Admissions.</h1>
+    </div>
+    <div class="avatar">
+        <img class="avatar-top" src="images/home/avatar-top.svg">
+        <img src="images/home/avatar-main.svg">
+    </div>
+    <div class="landing-content">
+        <h1>Ultimate guide to Undergraduate Admissions.</h1>
+        <p>Confused about which college to choose? students across the country and helps you get admitted to the top colleges</p>
+        <a href="/mentorship" class="mq-button">MANAGEMENT QUOTA ADMISSION <img src="images/home/arrow-right.svg"></a>
+    </div>
+</section>
+
+
+<!-- FEATURES -->
+<section id="features">
+    <h1 class="sec-head">FEATURES</h1>
+    <p class="sec-blurb">You are going to <svg version="1.1" class="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                               width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve"><path  stroke="#e85454" fill="#e85454" stroke-miterlimit="10" d="M14.914,7.249c1.165-2.761,3.827-4.691,6.923-4.691
+                                                                                                                                                                    c4.17,0,7.174,3.567,7.551,7.819c0,0,0.204,1.055-0.245,2.955c-0.611,2.588-2.047,4.887-3.983,6.641l-10.246,9.142L4.84,19.973
+                                                                                                                                                                    c-1.936-1.754-3.372-4.054-3.983-6.641c-0.449-1.9-0.245-2.955-0.245-2.955C0.99,6.125,3.994,2.557,8.164,2.557
+                                                                                                                                                                    C11.26,2.557,13.749,4.487,14.914,7.249z"/></svg> Entrance plus</p>
+
+    <div class="features-list">
+        <div>
+            <a href="/ranklist/engineering">
+                <img src="images/features/ranklist.svg">
+                <p>College Rank List</p>
+            </a>
+        </div>
+        <div>
+            <a href="/mentorship">
+                <img src="images/features/search.svg">
+                <p>End to End Admission Guidance</p>
+            </a>
+        </div>
+        <div>
+            <a href="/mentorship">
+                <img src="images/features/one-one.svg">
+                <p>1 to 1 with College Student</p>
+            </a>
+        </div>
+        <div>
+            <a href="/entrance-exams">
+                <img src="images/features/list.svg">
+                <p>Entrance Exam List</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- RANKLIST -->
+<section id="ranklist">
+    
+    <section class="ranklist-intro section-common">
+        <div class="sec-intro">
+            <h1 class="sec-head">RankList</h1>
+            <p class="sec-blurb">Top Colleges in the country now at your fingertips.</p>
+            <a href="/ranklist/engineering" class="sec-btn">See Rank List</a>
+        </div>
+        <div class="sec-img">
+            <img src="images/home/ranklist-home.svg" width="600px">
+        </div>
+    </section>
+
+    <section class="ranklist-features">
+        <h6>Top colleges covered across India.</h6>
+        <h6>Unique platform to connect with college students.</h6>
+        <h6>Built by team of experienced professionals.</h6>
+    </section>
+</section>
+
+
+<!-- MENTORSHIP -->
+<section id="home-mentorship" class="section-common">
+    <div class="sec-intro">
+        <h1 class="sec-head">Mentorship</h1>
+        <p class="sec-blurb">From recommending a college to getting you admitted there,everything at a single click.</p>
+        <a href="/mentorship" class="sec-btn">Get Started</a>
+    </div>
+    <div class="sec-img">
+        <img src="images/home/mentor-homepage.svg" width="600px">
+    </div>
+</section>
+
+
+<!-- EXAM LIST -->
+<section id="home-exam" class="section-common">
+    <div class="sec-intro">
+        <h1 class="sec-head">Entrance Exam</h1>
+        <p class="sec-blurb">For any kind of help, we are just a click away.</p>
+        <a href="/entrance-exams" class="sec-btn">See Exam List</a>
+    </div>
+    <div class="sec-img">
+        <img src="images/home/list-of-exam-outline.svg" width="600px">
+    </div>
+</section>
+
+
+<!-- CONTACT FORM -->
+<section id="contact-form">
+    <div class="contact-info">
+        <h1 class="sec-head">Contact Us</h1>
+        <p>For any kind of help, including <span>Management Quota Admissions</span>, We are just a click away</p>
+    </div>
+    <form>
+        <label>Name:</label><input type="text">
+        <label>Password:</label><input type="email">
+        <label>Phone:</label><input type="tel">
+        <label>Message:</label><textarea rows="5"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+{% endblock %}
