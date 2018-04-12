@@ -21,6 +21,7 @@
                             [venantius/pyro "0.1.1"]
                             [boot-environ "1.1.0"]
                             [ring "1.6.3"]
+                            [org.clojure/core.async "0.4.474"]
                             [org.clojure/tools.nrepl "0.2.12"]
                             [ring/ring-defaults "0.3.1"]
                             [ring-middleware-format "0.7.2"]
@@ -63,6 +64,7 @@
       (environ :env {:http-port "7000"
                      :dbname "voidwalker"
                      :dbuser "void"
+                     :db-path "/home/vagrant/void-konserve"
                      :dbpassword "walker"})
       (watch :verbose true)
       (system :sys #'dev-system

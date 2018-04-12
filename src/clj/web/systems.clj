@@ -17,11 +17,12 @@
              [middleware :refer [new-middleware]]
              [repl-server :refer [new-repl-server]]
              [postgres :refer [new-postgres-database]]
+             [konserve :refer [new-konserve]]
              [handler :refer [new-handler]])))
-
-(do
-  (require '[pyro.printer :as printer])
-  (printer/swap-stacktrace-engine!))
+;
+; (do
+;   (require '[pyro.printer :as printer])
+;   (printer/swap-stacktrace-engine!))
 
 (def rest-middleware
   (fn [handler]
@@ -34,7 +35,7 @@
                                    [:site-middleware :void-db])
    :api-endpoint (component/using (new-endpoint hello-routes)
                                   [:api-middleware])
-   :void-db (new-postgres-database (db/get-db-spec-from-env :config config))
+   :void-db (new-konserve :type :filestore :path (:db-path config))
    :site-middleware (new-middleware {:middleware [[wrap-defaults site-defaults]]})
    :api-middleware (new-middleware
                     {:middleware  [rest-middleware

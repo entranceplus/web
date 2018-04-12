@@ -45,12 +45,13 @@
   (let [articles (get-all-articles void-db)]
     {:articles articles
      :banner (first articles)}))
+
+; (def db (-> system.repl/system :conn :store))
+; (content/get-post db {:url "http://wwwasas.google.com"})
 ;
 ; (def void-db (:void-db system.repl/system))
 ; (get-all-articles void-db)
 ; (get-blog-data void-db)
-
-
 (defn site [{db :void-db}]
   (routes
    (GET "/" [] (home-page))
@@ -60,7 +61,7 @@
                                     :data (get-blog-data db)))
    (GET "/mentorship" [] (selmer-response "public/mentorship.html"))
    (GET "/content/:url" [url] (selmer-response "public/article.html"
-                                               :data (content/get-post db :url url)))
+                                               :data (content/get-post db {:url url})))
    (ANY "*" [] (home-page))))
 
 ;; next steps
