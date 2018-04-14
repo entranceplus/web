@@ -46,13 +46,17 @@
     {:articles articles
      :banner (first articles)}))
 
-; (def db (-> system.repl/system :conn :store))
+(def db (-> system.repl/system :void-db :store))
 ; (content/get-post db {:url "http://wwwasas.google.com"})
 ;
+; (require '[konserve.core :as k])
+; (require '[clojure.core.async :refer [<!!]])
+
+; (<!! (k/get-in db [::post]))
 ; (def void-db (:void-db system.repl/system))
-; (get-all-articles void-db)
+; (get-all-articles db)
 ; (get-blog-data void-db)
-(defn site [{db :void-db}]
+(defn site [{{db :store} :void-db}]
   (routes
    (GET "/" [] (home-page))
    (GET "/ranklist/:type" [type] (list-page type))
