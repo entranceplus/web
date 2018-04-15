@@ -1,4 +1,4 @@
-(def project 'web)
+(def project 'entranceplus/web)
 (def version "0.1.0-SNAPSHOT")
 
 (set-env! :resource-paths #{"src/cljs" "src/clj" "resources"}
