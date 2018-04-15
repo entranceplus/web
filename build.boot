@@ -57,6 +57,10 @@
  jar {:main        'web.core
       :file        (str "web-" version "-standalone.jar")})
 
+(require '[adzerk.bootlaces :refer :all])
+(bootlaces! version :dont-modify-paths? true)
+
+
 (deftask dev
      "run a restartable system"
      []
@@ -64,7 +68,7 @@
       (environ :env {:http-port "7000"
                      :dbname "voidwalker"
                      :dbuser "void"
-                     :db-path "/home/vagrant/void-konserve"
+                     :db-path "./void-konserve"
                      :dbpassword "walker"})
       (watch :verbose true)
       (system :sys #'dev-system
@@ -95,5 +99,13 @@
   [a args ARG [str] "the arguments for the application."]
   (require '[kongauth.core :as app])
   (apply (resolve 'app/-main) args))
+
+(deftask deps [])
+
+(deftask publish []
+  (comp
+   (build-jar)
+   (push-snapshot)))
+
 
 (require '[adzerk.boot-test :refer [test]])

@@ -42,8 +42,31 @@
   <p><img src="images/mentor/arrow-tick.svg">Get the student admitted to the selected collge through Management/NRI Quota.</p>
   <p><img src="images/mentor/arrow-tick.svg">One to one conversation with the student of the college you want to know about.</p>
   <p><img src="images/mentor/arrow-tick.svg">Get email,whatsapp and telephonic support from Entranceplus team within 24 hours</p>
-  <a href="" class="sec-btn">Make Payment</a>
+  <button onclick="startPayment()" class="sec-btn">Make Payment</a>
   </div>
 </section>
+
+<script src="https://js.instamojo.com/v1/checkout.js"></script>
+<script type="text/javascript">
+ Instamojo.configure({
+     handlers: {
+         onSuccess: function (response) {
+             // handle success here
+             alert("Payment recieved. We will contact you shortly");
+             console.log("Payment successfull");
+         } ,
+         onFailure: function (response) {
+             // handle failure here
+             alert("Payment failed");
+             console.log("Error occured", response);
+         }
+     }
+ });
+
+ function startPayment() {
+    // Instamojo.open('https://www.instamojo.com/@eptest/la9d8521ab43a4d2f966f1712179de67b/');
+     Instamojo.open('https://www.instamojo.com/@eptest');
+ }
+</script>
 
 {% endblock %}

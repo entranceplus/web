@@ -5,10 +5,12 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/web
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
-
+      - image: circleci/clojure:boot
+    environment:
+      JVM_OPTS: -Xmx3200m
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -16,7 +18,11 @@ jobs:
 
     steps:
       - checkout
-
-      - run: npm i
-      - run: ./node_modules/.bin/gulp build
-      - run:  ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+      - restore_cache:
+          key: web-{{checksum "build.boot"}}
+      - run: boot deps
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: web-{{checksum "build.boot"}}
+      - run: boot publish
