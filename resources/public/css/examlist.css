@@ -25,12 +25,17 @@
   line-height: 27px;
 }
 
-/*examlist*/
+/* examlist */
 .exam-list{
   padding: 50px 18px;
   background: #f5f5f5;
 }
-.list{
+
+.exam-list-container {
+  margin-top: -120px;
+  position: relative;
+}
+.list-container {
   width: 800px;
   margin: 0 auto;
   display: flex;
@@ -41,46 +46,34 @@
   background: white;
   border-radius: 3px;
 }
-
-
-/*all div[list-heading/list-content] inside each list*/
-.list div{
+.list-heading {
   display: flex;
-}
-
-.list-heading{
   font-family: 'Merriweather', serif;
   font-size: 40px;
   color: #61d461; 
-  font-weight: 900;   
+  font-weight: 900;
 }
-.list-content{
-  justify-content: space-between;
-  align-content: center;
-  font-size: 18px;
-}
-
-.list div:last-child p{
-  margin-bottom: 0;
-}
-
-.list span,.list a{
-  font-weight: 200;
-}
-
 .list-heading p:first-child{
   font-size: 40px;
   color: black;
   margin-right: 15px;
 }
-
-.list-heading p{
+.list-heading p {
   margin-top: 18px;
   margin-bottom: 18px;
 }
+.list-info-content {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 18px;
+}
+.list-info-content span,.list-info-content a{
+  font-weight: 200;
+}
 
 /*button in list*/
-.list a{
+.list-info-content a{
   font-size: 17px;
   padding: 9px 22px;
   border-radius: 25px;
@@ -89,85 +82,110 @@
   display: inline-block;
   transition: all 0.2s ease-out;
 }
-.list a:hover{
+.list-info-content a:hover{
   background: #424141;
   color: white;
   border-color: #424141;
 }
-
-
-@media(max-width: 900px){
-  .exam h1, .exam p, .list {
+.list-info-content:last-child p {
+  margin-bottom: 0;
+}
+@media(max-width: 900px) {
+  .exam h1, .exam p{
+    width: 720px;
+  }
+  .list-container {
     width: 720px;
   }
 }
-
-
-@media(max-width: 768px){
-  .exam h1, .exam p, .list {
+@media(max-width: 768px) {
+  .exam h1, .exam p{
     width: 550px;
   }
-  .list-content{
+  .list-container {
+    width: 550px;
+  }
+  .list-info-content {
     flex-wrap: wrap;
   }
-  .list a {
+  .last-info-content-child-a {
     margin-top: 30px;
-    text-align: center;
   }
 }
-
 
 @media(max-width: 600px) {
   .exam{
     padding-top: 100px;
   }
-  .exam h1, .exam p, .list {
+  .exam h1{
+    font-size: 50px;
+  }
+  .exam h1, .exam p{
     width: 100%;
     padding: 0 15px;
   }
-  .list-content{
-    flex-direction: column;
-  }
-  .list div:last-child p{
-    margin-bottom: 18px;
-  }
-  .list a {
-    margin-bottom: 18px;
-    width: 50%;
-  }
-  .list .list-content {
-    display: none;
-  }
-  .list .list-content.list-open {
-    display: flex;
+  .exam-list-container {
+    margin-top: -90px;
   }
   .list-heading {
-    font-weight: 400;
-    color: #4bbc4b;
+    margin-bottom: -20px;
   }
-  .list-heading p,
-  .list-heading p:first-child {
+  .list-heading p:last-child {
+    margin-right: 17px;
+  }
+  .list-heading p, .list-heading p:first-child {
+    font-family: 'Libre Baskerville', serif;
     font-size: 23px;
-    font-weight: 600;
-    font-family: 'Muli', sans-serif;
-  } 
+    color: #3ac63a;
+  }
   .list-heading p:first-child {
-    font-size: 25px;
+    color: #353535;
+    /* text-decoration: underline; */
   }
-  .list .list-content span {
-    font-size: 17px;
-  }
-  .list-content p {
-    margin: 10px 0;
-  }
-  .list-content a {
+  .list-container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 10px;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  .list-info-content {
+    flex-direction: column;
+  }
+  .last-info-content p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .last-info-content-child {
+    margin-top: 20px;
+  }
+  .list-info-content:last-child p {
+    margin-bottom: 15px;
+  }
+  .last-info-content-child-a {
+    margin-top: 10px;
+    width: 80%;
+    margin: 10px auto 0;
+    text-align: center;
+  }
+  .list-container {
+    background: white url(/images/examlist/arrow-down.svg) no-repeat;
+    background-position: 97% 26px;
+  }
+  .up-arrow {
+    background: white url(/images/examlist/arrow-up.svg) no-repeat;
+    background-position: 97% 26px;
+  }
+  .list-info-container {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s linear;
+  }
+  .collapse-ranklist {
+    max-height: 500px;
+    overflow: hidden;
+    margin-top: 10px;
   }
 }
-
 
 @media(max-width: 380px) {
   .exam h1{
@@ -175,8 +193,5 @@
   }
   .list-heading{
     font-size: 30px;
-  }
-  .list a {
-    width: 100%;
   }
 }

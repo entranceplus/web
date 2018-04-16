@@ -13,19 +13,6 @@ close.addEventListener('click', function () {
 	document.body.style.overflow = "auto";
 });
 
-// exam list on small screen
-var list_heading = document.querySelectorAll('.list-heading');
-var sibling1, sibling2;
-list_heading.forEach(function(i){
-	i.addEventListener('click', function(){
-		sibling1 = this.nextElementSibling;
-		sibling2 = sibling1.nextElementSibling;
-		console.log(sibling1, sibling2);
-		sibling1.classList.toggle('list-open');
-		sibling2.classList.toggle('list-open');
-	});
-});
-
 
 //changing bg
 window.addEventListener("scroll", function (e) {
@@ -49,4 +36,29 @@ dropdown_a.addEventListener('click', function () {
 });
 drop_arrow.addEventListener('click', function(){
 	dropdown.classList.add('remove-dropdown');
+});
+
+
+//exam list showing all data about college on clicking
+var list_heading = document.querySelectorAll('.list-heading');
+var exam_list_container = document.querySelector('.exam-list-container');
+var list_info_container = document.querySelector('.list-info-container');
+
+exam_list_container.addEventListener('click', function(e){
+  var target_el = e.target;
+  var target_el_parent = e.target.parentNode;
+  if(target_el.className.match(/list-heading/) || target_el_parent.className.match(/list-heading/)) {
+  	if(target_el.className.match(/list-heading/)) {
+      console.log(target_el);
+      console.log(target_el.nextElementSibling);
+      target_el.nextElementSibling.classList.toggle('collapse-ranklist');
+      target_el.parentNode.classList.toggle('up-arrow');
+    }
+    if(target_el_parent.className.match(/list-heading/)) {
+      console.log(target_el_parent);
+      console.log(target_el_parent.nextElementSibling);
+      target_el_parent.nextElementSibling.classList.toggle('collapse-ranklist');
+      target_el_parent.parentNode.classList.toggle('up-arrow');
+    }
+  }
 });
