@@ -95,7 +95,9 @@
   font-weight: 200;
 }
 
-
+.mentorship_button button{
+  margin-right: 15px;
+}
 
 @media(max-width: 900px){
   .mentorship-intro{
@@ -187,6 +189,9 @@
 
 
 @media(max-width: 380px) {
+  .mentorship-start {
+    padding-bottom: 30px;
+  }
   .mentorship-intro h1{
     font-size: 45px;
   }
@@ -195,6 +200,18 @@
   }
   .mentor-ques .question{
     width: 100%;
+  }
+  .mentorship_button {
+    text-align: center;
+  }
+  .mentorship_button button {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .mentorship_button button,
+  .mentorship_button a {
+    width: 75%;
+    margin-top: 15px;
   }
 }
 
