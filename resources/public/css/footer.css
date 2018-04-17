@@ -67,12 +67,13 @@
   display: inline-block;
   color: black;
   font-size: 17px;
+  margin-top: 10px;
+}
+#footer-links a:first-child {
+  margin-top: 0;
 }
 #footer-links a:hover{
   text-decoration: underline;
-}
-#footer-about a:last-child{
-  margin-top: 10px;
 }
 
 
@@ -173,5 +174,8 @@
     order: 1;
     margin-top: 15px;
     margin-bottom: 30px;
+  }
+  #footer-links a {
+    margin-top: 15px;
   }
 }
