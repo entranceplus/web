@@ -68,7 +68,7 @@
       (environ :env {:http-port "7000"
                      :dbname "voidwalker"
                      :dbuser "void"
-                     :db-path "./void-konserve"
+                     :db-path "/home/akash/workspace/voidwalker/void-konserve"
                      :dbpassword "walker"})
       (watch :verbose true)
       (system :sys #'dev-system

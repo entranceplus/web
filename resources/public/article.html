@@ -2,26 +2,15 @@
 {% extends "public/base.html" %}
 {% block content %}
 
-<section class="blog">
-
+<!-- EXAM-INTRO -->
+<section class="exam">
+    <h1>{{title}}</h1>
+    <p>{{subtitle}}</p>
 </section>
 
-<article class="article-full">
-	<img src="/images/articles/library.jpg" class="article-main-img">
-	<h1 class="heading">{{title}}</h1>
-	<!-- <p class="sub-heading">My first trip to the shower was better than I expected. A beautiful black woman approached my cage to the shower was better than I expected. A beautiful black woman approached my cage.</p> -->
-	<p class="date-pub"><span class="clock"></span><span>Not yet implemented</span></p>
+
   {% safe %}
 	<p class="">{{ content }}</p>
   {% endsafe %}
-	<!-- <p>My first trip to the shower was better than I expected. A beautiful black woman approached my cage. I walked with her to the shower, wearing only white boxer shorts and socks, with my towel and soap dish in my hands, which were cinched behind my back.</p>
-	<h2 class="new-heading">
-	who believed that intimidation was a part of their job description. I walked with her to the shower</h2>
-	<figure>
-		<img src="/images/articles/library.jpg">
-		<figcaption>Caption of image</figcaption>
-	</figure>
-	<p>My first trip to the shower <a href="#" class="links">was better than I expected</a> . A beautiful black woman approached my cage. “Are you ready to take a shower?” I was taken by her eyes. For a couple of years, the faces above the badges had been almost all white and male. She was different. Her hair wasn’t fancy. Her demeanor suggested that it didn’t need to be. It sat in a bun.</p> -->
-</article>
 
 {% endblock %}

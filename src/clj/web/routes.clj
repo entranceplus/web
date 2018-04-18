@@ -39,20 +39,33 @@
 (defn get-all-articles [void-db]
   (map (fn [{:keys [url] :as post}]
           (assoc post :url (str "/content/" url)))
-       (content/get-post void-db)))
+       (content/get-post void-db nil)))
 
 (defn get-blog-data [void-db]
   (let [articles (get-all-articles void-db)]
     {:articles articles
      :banner (first articles)}))
 
-; (def db (-> system.repl/system :conn :store))
+;; (def db (-> system.repl/system :void-db :store))
+;; (content/get-templated-post db)
+
+
+(defn get-detailed-article
+  "here detail means with datasource expanded"
+  [db url]
+  (->> db
+       content/get-templated-post
+       (filter #(= url (:url %)))
+       first))
+
+;; (->>  (get-detailed-article db "that") :datasource first :data first :mq )
+
 ; (content/get-post db {:url "http://wwwasas.google.com"})
 ;
 ; (def void-db (:void-db system.repl/system))
 ; (get-all-articles void-db)
 ; (get-blog-data void-db)
-(defn site [{db :void-db}]
+(defn site [{{db :store} :void-db}]
   (routes
    (GET "/" [] (home-page))
    (GET "/ranklist/:type" [type] (list-page type))
@@ -61,7 +74,7 @@
                                     :data (get-blog-data db)))
    (GET "/mentorship" [] (selmer-response "public/mentorship.html"))
    (GET "/content/:url" [url] (selmer-response "public/article.html"
-                                               :data (content/get-post db {:url url})))
+                                               :data (get-detailed-article db url)))
    (ANY "*" [] (home-page))))
 
 ;; next steps
