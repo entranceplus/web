@@ -23,7 +23,7 @@
    (GET "/hello" [] (ok-response {:msg "Hello world!!"}))))
 
 (defn home-page []
-  (selmer-response "public/index.html"))
+  (selmer-response "public/home.html"))
 
 (defn list-page [type]
   (let [data (case type
@@ -46,9 +46,13 @@
     {:articles articles
      :banner (first articles)}))
 
-;; (def db (-> system.repl/system :void-db :store))
-;; (content/get-templated-post db)
+;;(require '[entranceplus.core :as e])
+;;(def ep-db  (->  @entrance-plus.core/systems last :void-db :store))
 
+;;(def db (-> system.repl/system :void-db :store))
+;; (map :datasource  (content/get-templated-post ep-db))
+
+;; (:content  (get-detailed-article ep-db "ranklist-engineering"))
 
 (defn get-detailed-article
   "here detail means with datasource expanded"
