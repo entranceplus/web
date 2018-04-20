@@ -420,11 +420,29 @@
 
   /* mentor button */
   .mentor-btn a {
-    border: 1px solid black;
+    border: none;
+    padding: 0;
   }
   /* remove hover green mentor btn */
   #header .mentor-btn a:hover {
     color: white;
+  }
+
+  /* changing the order of menu in mobile */
+  .head_sublinks > li:nth-child(1) {
+    order: 4;
+  }
+  .head_sublinks > li:nth-child(2) {
+    order: 5;
+  }
+  .head_sublinks > li:nth-child(3) {
+    order: 3;
+  }
+  .head_sublinks > li:nth-child(4) {
+    order: 1;
+  }
+  .head_sublinks > li:nth-child(5) {
+    order: 2;
   }
 }
 
