@@ -2,15 +2,24 @@ var header = document.getElementById('header');
 var hamburger = header.querySelector('.hamburger');
 var links = header.querySelector('.nav-links');
 var close = header.querySelector('.close-btn');
+var overlay = document.querySelector('.overlay');
 hamburger.addEventListener('click', function () {
 	links.classList.add('nav-open');
 	close.classList.add('close-hamburger');
 	document.body.style.overflow = "hidden";
+	overlay.classList.add('overlay-open');
 });
 close.addEventListener('click', function () {
 	links.classList.remove('nav-open');
 	close.classList.remove('close-hamburger');
 	document.body.style.overflow = "auto";
+	overlay.classList.remove('overlay-open');
+});
+overlay.addEventListener('click', function(){
+	links.classList.remove('nav-open');
+	close.classList.remove('close-hamburger');
+	document.body.style.overflow = "auto";
+	overlay.classList.remove('overlay-open');
 });
 
 
