@@ -21,7 +21,7 @@
 
 .contact-info {
   background-size: cover;
-  width: 400px;
+  width: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,10 +84,50 @@ form{
   border-bottom: 1px dotted white;
 }
 
+.contactform-form-head {
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding: 0 15px;
+}
+.contactform-form-head > span {
+  font-weight: 400;
+}
+
+.contacform-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contacform-icons span {
+  font-size: 18px;
+  margin: 0 15px;
+}
+.contacform-icons a {
+  color: white;
+}
+
 
 @media(max-width: 600px) {
+  .contact-info {
+    width: 100%;
+  }
   .contact-info p{
     font-size: 20px;
+  }
+  .contacform-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 80px;
+  }
+  .contacform-icons span img{
+    position: relative;
+    top: 2px;
+  }
+  .contacform-icons span a{
+    margin-left: 10px;
   }
 }
 
