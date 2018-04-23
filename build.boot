@@ -1,9 +1,9 @@
 (def project 'entranceplus/web)
-(def version "0.1.0-SNAPSHOT")
+(def version "0.1.0")
 
 (set-env! :resource-paths #{"src/cljs" "src/clj" "resources"}
-          :checkouts '[[snow "0.1.0-SNAPSHOT"]
-                       [voidwalker "0.1.0-SNAPSHOT"]]
+          :checkouts '[[snow "0.1.1"]
+                       [voidwalker "0.1.2"]]
           :dependencies   '[[org.clojure/clojure "1.9.0"]
                             [org.clojure/clojurescript "1.9.946"]
                             [org.immutant/immutant "2.1.9"]
@@ -14,9 +14,10 @@
                             [metosin/ring-http-response "0.9.0"]
                             [selmer "1.11.7"]
                             [proto-repl "0.3.1"]
-                            [snow "0.1.0-SNAPSHOT"]
-                            [voidwalker "0.1.0-SNAPSHOT"]
+                            [snow "0.1.1"]
+                            [voidwalker "0.1.2"]
                             [compojure "1.6.0"]
+                            [entranceplus/bootlaces "0.1.14"]
                             [environ "1.1.0"]
                             [venantius/pyro "0.1.1"]
                             [boot-environ "1.1.0"]
@@ -105,7 +106,7 @@
 (deftask publish []
   (comp
    (build-jar)
-   (push-snapshot)))
+   (push-release)))
 
 
 (require '[adzerk.boot-test :refer [test]])
