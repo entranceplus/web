@@ -423,11 +423,15 @@
     border: none;
     padding: 0;
   }
-  /* remove hover green mentor btn */
-  #header .mentor-btn a:hover {
-    color: white;
+  .fixed-bg .mentor-btn a {
+    border: none;
   }
-
+  #header .mentor-btn a:hover,
+  #header.fixed-bg .mentor-btn a:hover {
+    background: none;
+    color: black;
+    border: none;
+  }
   /* changing the order of menu in mobile */
   .head_sublinks > li:nth-child(1) {
     order: 4;
