@@ -1,6 +1,6 @@
 #form-submitMsg{
   position: fixed;
-  bottom: 0;
+  bottom: -120px;
   width: 100%;
   opacity: 0;
   transition: all 0.3s ease;
