@@ -18,11 +18,9 @@ The project uses [boot](http://boot-clj.com/) for managing dev environ.
 
 ## Setup
 
-1. [Install boot](https://github.com/boot-clj/boot#install)
-2. [Install docker](https://docs.docker.com/install/#supported-platforms)
-3. Run `docker run -p 5432:5432 -t shakdwipeea/voidwalker-db`
-4. Run `boot dev` in terminal.
-5. Website should be available at `http://localhost:6100`
+1. [Install clj](https://clojure.org/guides/getting_started#_clojure_installer_and_cli_tools)
+4. Run `clj -Adev -m user` in terminal.
+5. Website should be available at `http://localhost:7000`
 
 
 ## Directory structure

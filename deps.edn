@@ -1,0 +1,8 @@
+{:deps {snow {:git/url "https://github.com/entranceplus/snow"
+              :sha "6b959cbc968fb3864a572491066777fce72b332e"}
+        voidwalker {:git/url "https://github.com/entranceplus/voidwalker"
+                    :sha "e4c06a5c0261aee272e36872d59b88b717c03bd8"}
+        com.cemerick/friend {:mvn/version "0.2.3"}
+        selmer {:mvn/version "1.11.7"}}
+ :paths ["src" "resources"]
+ :aliases {:dev {:extra-paths ["dev"]}}}

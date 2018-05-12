@@ -22,3 +22,5 @@ pom.xml.asc
 .nrepl-port
 .nrepl-history
 void-konserve
+.cpcache
+profiles.edn

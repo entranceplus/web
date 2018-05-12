@@ -38,19 +38,20 @@
 
 (defn get-all-articles [void-db]
   (map (fn [{:keys [url] :as post}]
-          (assoc post :url (str "/content/" url)))
-       (content/get-post void-db nil)))
+         (assoc post :url (str "/content/" url)))
+       (content/get-post void-db)))
 
 (defn get-blog-data [void-db]
   (let [articles (get-all-articles void-db)]
     {:articles articles
      :banner (first articles)}))
 
-;;(require '[entranceplus.core :as e])
-;;(def ep-db  (->  @entrance-plus.core/systems last :void-db :store))
 
-;;(def db (-> system.repl/system :void-db :store))
-;; (map :datasource  (content/get-templated-post ep-db))
+;; (require '[entranceplus.core :as e])
+;; (def ep-db  (->  @entrance-plus.core/systems last :void-db :store))
+
+;; (def db (-> system.repl/system :void-db :store))
+;; (map :datasource  (content/get-templated-post db))
 
 ;; (:content  (get-detailed-article ep-db "ranklist-engineering"))
 
@@ -58,17 +59,17 @@
   "here detail means with datasource expanded"
   [db url]
   (->> db
-       content/get-templated-post
-       (filter #(= url (:url %)))
-       first))
+     content/get-templated-post
+     (filter #(= url (:url %)))
+     first))
 
-;; (->>  (get-detailed-article db "that") :datasource first :data first :mq )
+;; (->>  (get-detailed-article db "qwd") :content)
 
-; (content/get-post db {:url "http://wwwasas.google.com"})
-;
-; (def void-db (:void-db system.repl/system))
-; (get-all-articles void-db)
-; (get-blog-data void-db)
+;; (content/get-post db {:url "http://wwwasas.google.com"})
+
+;; (def void-db (:void-db system.repl/system))
+;; (get-all-articles void-db)
+;; (get-blog-data void-db)
 (defn site [{{db :store} :void-db}]
   (routes
    (GET "/" [] (home-page))
