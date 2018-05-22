@@ -2,15 +2,8 @@
 {% extends "public/base.html" %}
 {% block content %}
 
-<!-- EXAM-INTRO -->
-<section class="exam">
-    <h1>{{title}}</h1>
-    <p>{{subtitle}}</p>
-</section>
-
-
   {% safe %}
-	<p class="">{{ content }}</p>
+	{{ content }}
   {% endsafe %}
 
 {% endblock %}

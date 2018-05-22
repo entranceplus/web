@@ -2,6 +2,7 @@
   (:require [compojure.core :refer [routes GET ANY]]
             [ring.util.http-response :as response]
             [selmer.parser :as selmer]
+            [hiccup.core :as h]
             [voidwalker.content :as content]))
 
 (defn ok-response [response]
@@ -37,8 +38,11 @@
     (selmer-response "public/exam-list.html" :data data)))
 
 (defn get-all-articles [void-db]
-  (map (fn [{:keys [url] :as post}]
-         (assoc post :url (str "/content/" url)))
+  (map (fn [[id {:keys [url content] :as post}]]
+         (println "url is " url)
+         (assoc post
+                :url (str "/content/" url)
+                :content (h/html content)))
        (content/get-post void-db)))
 
 (defn get-blog-data [void-db]
@@ -50,7 +54,9 @@
 ;; (require '[entranceplus.core :as e])
 ;; (def ep-db  (->  @entrance-plus.core/systems last :void-db :store))
 
-;; (def db (-> system.repl/system :void-db :store))
+;; (def db (-> (snow.repl/system) first :web.systems/void-db :store))
+;; (content/get-post db)
+;; (get-blog-data db)
 ;; (map :datasource  (content/get-templated-post db))
 
 ;; (:content  (get-detailed-article ep-db "ranklist-engineering"))
@@ -59,18 +65,18 @@
   "here detail means with datasource expanded"
   [db url]
   (->> db
-     content/get-templated-post
+     get-all-articles
      (filter #(= url (:url %)))
      first))
 
-;; (->>  (get-detailed-article db "qwd") :content)
+;; (->>  (get-detailed-article db "") :content)
 
 ;; (content/get-post db {:url "http://wwwasas.google.com"})
 
 ;; (def void-db (:void-db system.repl/system))
 ;; (get-all-articles void-db)
 ;; (get-blog-data void-db)
-(defn site [{{db :store} :void-db}]
+(defn site [{{db :store} :web.systems/void-db}]
   (routes
    (GET "/" [] (home-page))
    (GET "/ranklist/:type" [type] (list-page type))
@@ -81,7 +87,8 @@
    (GET "/terms" [] (selmer-response "public/terms.html"))
    (GET "/disclaimer" [] (selmer-response "public/disclaimer.html"))
    (GET "/content/:url" [url] (selmer-response "public/article.html"
-                                               :data (get-detailed-article db url)))
+                                               :data (get-detailed-article db (str "/content/"
+                                                                                   url))))
    (ANY "*" [] (home-page))))
 
 ;; next steps
