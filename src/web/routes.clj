@@ -1,9 +1,11 @@
 (ns web.routes
   (:require [compojure.core :refer [routes GET ANY]]
             [ring.util.http-response :as response]
+            [ring.util.request :as r]
             [selmer.parser :as selmer]
             [hiccup.core :as h]
-            [voidwalker.content :as content]))
+            [voidwalker.content :as content]
+            [taoensso.timbre :refer [info]]))
 
 (defn ok-response [response]
   (-> (response/ok response)
@@ -41,7 +43,7 @@
   (map (fn [[id {:keys [url content] :as post}]]
          (println "url is " url)
          (assoc post
-                :url (str "/content/" url)
+                :url url
                 :content (h/html content)))
        (content/get-post void-db)))
 
@@ -76,20 +78,25 @@
 ;; (def void-db (:void-db system.repl/system))
 ;; (get-all-articles void-db)
 ;; (get-blog-data void-db)
+
+(defn html-article [db url]
+  (selmer-response "public/article.html"
+                   :data (get-detailed-article db url)))
+
 (defn site [{{db :store} :web.systems/void-db}]
   (routes
    (GET "/" [] (home-page))
-   (GET "/ranklist/:type" [type] (list-page type))
+   ;; (GET "/ranklist/:type" [type] (list-page type))
    (GET "/entrance-exams" [] (list-page "entrance-exam"))
    (GET "/blog" [] (selmer-response "public/blog.html"
                                     :data (get-blog-data db)))
    (GET "/mentorship" [] (selmer-response "public/mentorship.html"))
    (GET "/terms" [] (selmer-response "public/terms.html"))
    (GET "/disclaimer" [] (selmer-response "public/disclaimer.html"))
-   (GET "/content/:url" [url] (selmer-response "public/article.html"
-                                               :data (get-detailed-article db (str "/content/"
-                                                                                   url))))
-   (ANY "*" [] (home-page))))
+   (GET "/content/:url" [url] (html-article db (str "content/" url)))
+   (ANY "*" {uri :uri}
+        (info "Request url is " uri)
+        (html-article db (subs uri 1)))))
 
 ;; next steps
 ;; transcriptor for testing apis
