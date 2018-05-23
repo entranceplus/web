@@ -113,6 +113,8 @@
 #header .head_dropdown-menu a {
   color: #585858;
   font-size: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /* arrow */
@@ -447,6 +449,18 @@
   }
   .head_sublinks > li:nth-child(5) {
     order: 2;
+  }
+
+  .head__dropdown__entrance:hover .head_dropdown-menu--extrance{
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .head_dropdown-menu--extrance {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  #header .head_dropdown-menu--extrance a {
+    padding-left: 0;
   }
 }
 
