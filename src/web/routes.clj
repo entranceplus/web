@@ -80,9 +80,9 @@
 ;; (get-blog-data void-db)
 
 (defn html-article [db url]
-  (some-> url
-          (get-detailed-article db)
-          (selmer-response "public/article.html" :data)))
+  (some->> url
+           (get-detailed-article db)
+           (selmer-response "public/article.html" :data)))
 
 (defn site [{{db :store} :web.systems/void-db}]
   (routes
