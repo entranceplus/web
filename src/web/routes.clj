@@ -80,8 +80,9 @@
 ;; (get-blog-data void-db)
 
 (defn html-article [db url]
-  (selmer-response "public/article.html"
-                   :data (get-detailed-article db url)))
+  (some-> url
+          (get-detailed-article db)
+          (selmer-response "public/article.html" :data)))
 
 (defn site [{{db :store} :web.systems/void-db}]
   (routes
@@ -96,7 +97,8 @@
    (GET "/content/:url" [url] (html-article db (str "content/" url)))
    (ANY "*" {uri :uri}
         (info "Request url is " uri)
-        (html-article db (subs uri 1)))))
+        (or (html-article db (subs uri 1))
+           (response/found "/")))))
 
 ;; next steps
 ;; transcriptor for testing apis
