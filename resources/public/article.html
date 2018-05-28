@@ -5,13 +5,8 @@
 
 {% block content %}
 <article class="article-full">
-  <img src="images/articles/library.jpg">
-  <h1>In 1962, a national council made up of representatives of thirty government and private organizations was formed to address</h1>
-  <h2>My first trip to the shower was better than I expected. A beautiful black woman approached my cage to the shower was better than I expected. A beautiful black woman approached my cage.</h2>
-  <h3>Jan 12, 2015</h3>
-  <p>My first trip to the shower was better than I expected. A beautiful black woman approached my cage. “Are you ready to take a shower?” I was taken by her eyes. For a couple of years, the faces above the badges had been almost all white and male. She was different. Her hair wasn’t fancy. Her demeanor suggested that it didn’t need to be. It sat in a bun, revealing light brown skin and perfectly symmetrical collarbones. She was more relaxed than most guards, smiling more than the men who believed that intimidation was a part of their job description. I walked with her to the shower, wearing only white boxer shorts and socks, with my towel and soap dish in my hands, which were cinched behind my back.</p>
-  <p>My first trip to the shower was better than I expected. A beautiful black woman approached my cage. I walked with her to the shower, wearing only white boxer shorts and socks, with my towel and soap dish in my hands, which were cinched behind my back.</p>
-  <h4>who believed that intimidation was a part of their job description. I walked with her to the shower</h4>
-  <p>My first trip to the shower <a href="#">was better than I expected</a> . A beautiful black woman approached my cage. “Are you ready to take a shower?” I was taken by her eyes. For a couple of years, the faces above the badges had been almost all white and male. She was different. Her hair wasn’t fancy. Her demeanor suggested that it didn’t need to be. It sat in a bun.</p>
+  {% safe %}
+  {{content}}
+  {% endsafe %}
 </article>
 {% endblock %}
