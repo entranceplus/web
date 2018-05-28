@@ -93,6 +93,7 @@
                                     :data (get-blog-data db)))
    (GET "/mentorship" [] (selmer-response "public/mentorship.html"))
    (GET "/terms" [] (selmer-response "public/terms.html"))
+   (GET "/article" [] (selmer-response "public/article.html"))
    (GET "/disclaimer" [] (selmer-response "public/disclaimer.html"))
    (GET "/content/:url" [url] (html-article db (str "content/" url)))
    (ANY "*" {uri :uri}
