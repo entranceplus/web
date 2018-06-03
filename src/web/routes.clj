@@ -44,7 +44,7 @@
          (println "url is " url)
          (assoc post
                 :url url
-                :content (h/html content)))
+                :content (h/html (conj [:div.article-full content]))))
        (content/get-post void-db)))
 
 (defn get-blog-data [void-db]
