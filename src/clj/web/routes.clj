@@ -80,6 +80,7 @@
    (GET "/terms" [] (selmer-response "public/terms.html"))
    (GET "/article" [] (selmer-response "public/article.html"))
    (GET "/disclaimer" [] (selmer-response "public/disclaimer.html"))
+   (GET "/branch-change" [] (selmer-response "public/whatsapp.html"))
    (GET "/content/:url" [url] (selmer-response "public/article.html"
                                                :data (get-detailed-article db url)))
    (ANY "*" [] (home-page))))
