@@ -11,12 +11,15 @@
 	color: #272626;
 	position: relative;
 	margin-top: -100px;
-	background: white;
+	background: #fbfbfb;
 	padding: 15px;
 	border-radius: 3px;
+	box-shadow: 0 1px 1px 0 #888888;
+	margin-bottom: 30px;
 }
 .article-full img {
 	width: 670px;
+	height: auto;
 }
 .article-full h1 {
 	margin-bottom: 0;
@@ -78,6 +81,7 @@
 	}
 	.article-full img {
 		width: 470px;
+		height: auto;
 	}	
 }
 
@@ -87,6 +91,7 @@
 	}
 	.article-full img {
 		width:100%;
+		height: auto;
 	}	
 	.article-full h1 {
     font-size: 24px;

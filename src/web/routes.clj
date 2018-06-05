@@ -96,6 +96,7 @@
    (GET "/article" [] (selmer-response "public/article.html"))
    (GET "/disclaimer" [] (selmer-response "public/disclaimer.html"))
    (GET "/content/:url" [url] (html-article db (str "content/" url)))
+   (GET "/branch-change" [] (selmer-response "public/whatsapp.html"))
    (GET "/direct-admission" [] (response/moved-permanently "/mentorship"))
    (ANY "*" {uri :uri}
         (info "Request url is " uri)
