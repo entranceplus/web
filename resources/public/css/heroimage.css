@@ -218,7 +218,7 @@
   text-decoration: underline;
 }
 .branch-change-click a {
-  color: white;
+  color: #5bcf60;
 }
 
 @media(max-width: 900px) {
@@ -249,7 +249,7 @@
 
 @media(max-width: 600px) {
   .landing-branch-change p {
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 15px;
     padding-right: 15px;
   }
