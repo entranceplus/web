@@ -27,7 +27,7 @@
 	<article class="post">
 		<a href="{{article.url}}">
 			<div class="post-img">
-				<img src="images/blog/blog-img.jpg" width="300"></img>
+				<img src={{article.thumbnail|default:"images/blog/blog-img.jpg"}} width="300"></img>
 			</div>
 			<div class="blog-about">
 				<h1 class="blog-title">{{ article.title }}</h1>
