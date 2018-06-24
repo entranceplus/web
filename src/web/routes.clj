@@ -1,8 +1,11 @@
 (ns web.routes
   (:require [compojure.core :refer [routes GET ANY]]
             [ring.util.http-response :as response]
+            [ring.util.request :as r]
             [selmer.parser :as selmer]
-            [voidwalker.content :as content]))
+            [hiccup.core :as h]
+            [voidwalker.content :as content]
+            [taoensso.timbre :refer [info]]))
 
 (defn ok-response [response]
   (-> (response/ok response)
@@ -37,20 +40,26 @@
     (selmer-response "public/exam-list.html" :data data)))
 
 (defn get-all-articles [void-db]
-  (map (fn [{:keys [url] :as post}]
-          (assoc post :url (str "/content/" url)))
-       (content/get-post void-db nil)))
+  (map (fn [[id {:keys [url content] :as post}]]
+         (println "url is " url)
+         (assoc post
+                :url url
+                :content (h/html (conj [:div.article-full content]))))
+       (content/get-post void-db)))
 
 (defn get-blog-data [void-db]
   (let [articles (get-all-articles void-db)]
     {:articles articles
      :banner (first articles)}))
 
-;;(require '[entranceplus.core :as e])
-;;(def ep-db  (->  @entrance-plus.core/systems last :void-db :store))
 
-;;(def db (-> system.repl/system :void-db :store))
-;; (map :datasource  (content/get-templated-post ep-db))
+;; (require '[entranceplus.core :as e])
+;; (def ep-db  (->  @entrance-plus.core/systems last :void-db :store))
+
+;; (def db (-> (snow.repl/system) first :web.systems/void-db :store))
+;; (content/get-post db)
+;; (get-blog-data db)
+;; (map :datasource  (content/get-templated-post db))
 
 ;; (:content  (get-detailed-article ep-db "ranklist-engineering"))
 
@@ -58,21 +67,27 @@
   "here detail means with datasource expanded"
   [db url]
   (->> db
-       content/get-templated-post
-       (filter #(= url (:url %)))
-       first))
+     get-all-articles
+     (filter #(= url (:url %)))
+     first))
 
-;; (->>  (get-detailed-article db "that") :datasource first :data first :mq )
+;; (->>  (get-detailed-article db "") :content)
 
-; (content/get-post db {:url "http://wwwasas.google.com"})
-;
-; (def void-db (:void-db system.repl/system))
-; (get-all-articles void-db)
-; (get-blog-data void-db)
-(defn site [{{db :store} :void-db}]
+;; (content/get-post db {:url "http://wwwasas.google.com"})
+
+;; (def void-db (:void-db system.repl/system))
+;; (get-all-articles void-db)
+;; (get-blog-data void-db)
+
+(defn html-article [db url]
+  (some->> url
+           (get-detailed-article db)
+           (selmer-response "public/article.html" :data)))
+
+(defn site [{{db :store} :web.systems/void-db}]
   (routes
    (GET "/" [] (home-page))
-   (GET "/ranklist/:type" [type] (list-page type))
+   ;; (GET "/ranklist/:type" [type] (list-page type))
    (GET "/entrance-exams" [] (list-page "entrance-exam"))
    (GET "/blog" [] (selmer-response "public/blog.html"
                                     :data (get-blog-data db)))
@@ -80,10 +95,13 @@
    (GET "/terms" [] (selmer-response "public/terms.html"))
    (GET "/article" [] (selmer-response "public/article.html"))
    (GET "/disclaimer" [] (selmer-response "public/disclaimer.html"))
+   (GET "/content/:url" [url] (html-article db (str "content/" url)))
    (GET "/branch-change" [] (selmer-response "public/whatsapp.html"))
-   (GET "/content/:url" [url] (selmer-response "public/article.html"
-                                               :data (get-detailed-article db url)))
-   (ANY "*" [] (home-page))))
+   (GET "/direct-admission" [] (response/moved-permanently "/mentorship"))
+   (ANY "*" {uri :uri}
+        (info "Request url is " uri)
+        (or (html-article db (subs uri 1))
+           (response/found "/")))))
 
 ;; next steps
 ;; transcriptor for testing apis
