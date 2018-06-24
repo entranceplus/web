@@ -8,7 +8,7 @@ jobs:
     working_directory: ~/web
     docker:
       # specify the version you desire here
-      - image: circleci/clojure:boot
+      - image: circleci/clojure:tools-deps
     environment:
       JVM_OPTS: -Xmx3200m
       # Specify service dependencies here if necessary
@@ -19,10 +19,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: web-{{checksum "build.boot"}}
-      - run: boot deps
+          key: web-{{checksum "deps.edn"}}
+      - run: clj -Stree
       - save_cache:
           paths:
             - ~/.m2
-          key: web-{{checksum "build.boot"}}
-      - run: boot publish
+          key: web-{{checksum "deps.edn"}}
