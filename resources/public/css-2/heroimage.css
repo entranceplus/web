@@ -1,0 +1,40 @@
+/* === hero image === */
+.hero_image {
+    height: 407px;
+    width: 100%;
+    background: #4BB950;
+    position: relative;
+  }
+  .hero_bg {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  .hero_fg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+@media(max-width: 1280px) {
+    .hero_fg {
+      width: 95%;
+    }
+}
+
+@media(max-width: 780px) {
+    .hero_image {
+      height: 350px;
+    }
+}
+
+
+@media(max-width: 600px) {
+    .hero_image {
+      height: 250px;
+    }
+    .hero_fg {
+      bottom: 32px;
+    }
+}

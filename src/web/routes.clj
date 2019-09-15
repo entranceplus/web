@@ -26,7 +26,9 @@
    (GET "/hello" [] (ok-response {:msg "Hello world!!"}))))
 
 (defn home-page []
-  (selmer-response "public/home.html"))
+  (selmer-response "public/index.html"))
+
+(defn admission-page [] (selmer-response "public/home.html"))
 
 (defn list-page [type]
   (let [data (case type
@@ -87,6 +89,7 @@
 (defn site [{{db :store} :web.systems/void-db}]
   (routes
    (GET "/" [] (home-page))
+   (GET "/admission" [] (admission-page))
    ;; (GET "/ranklist/:type" [type] (list-page type))
    (GET "/entrance-exams" [] (list-page "entrance-exam"))
    (GET "/blog" [] (selmer-response "public/blog.html"

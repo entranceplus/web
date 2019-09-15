@@ -1,0 +1,82 @@
+/* header */
+.header_container {
+    position: fixed;
+    height: 65px;
+    z-index: 100;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+/* logo */
+.header .left_header img {
+    height: 36px;
+}
+/* blog and admission link */
+.header .blog_link {
+    margin-right: 24px;
+}
+.header .admission_link {
+    border: 1px solid white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.header_container.fixed-bg .blog_link:hover {
+    color: #55b950;
+}
+.header_container.fixed-bg .admission_link:hover {
+    background: #55b950;
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+/* fixed bg */
+.header_container.fixed-bg {
+    background: white;
+    border-bottom: 1px solid #e6e6e6;
+}
+.header_container.fixed-bg a {
+    color: #5f5f5f;
+}
+
+/* logo changing when fixed bg */
+.header_container.fixed-bg .admission_link {
+    border: 1px solid #5f5f5f;
+}
+.header .visible-fixed {
+    display: none;
+}
+.header_container.fixed-bg .visible-fixed {
+    display: inline-block;
+}
+.header_container.fixed-bg .visible-notfixed {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .header_container {
+        padding: 0;
+    }
+    .header {
+        padding: 0 20px;
+    }
+    .header .left_header img {
+        height: 28px;
+    }
+    .header .right_header a:first-child {
+        margin-right: 12px;
+    }
+}

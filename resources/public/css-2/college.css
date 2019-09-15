@@ -1,0 +1,41 @@
+/* === colleges === */
+.colleges {
+    color: #B1B1B1;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+}
+  .colleges > div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 92px;
+  }
+  .colleges > div:first-child {
+    margin-left: 0;
+  }
+  .colleges span {
+    margin-top: 8px;
+    text-align: center;
+  }
+
+
+  @media(max-width: 780px) {
+    .colleges > div {
+      margin-left: 42px;
+    }
+  }
+
+@media(max-width: 600px) { 
+.colleges {
+    justify-content: space-around;
+    width: 85%;
+    margin: 42px auto 0;
+    }
+    .colleges > div {
+    margin-left: 20px;
+    }
+    .colleges img {
+    height: 60px;
+    }
+}

@@ -1,0 +1,130 @@
+/* === top content === */
+.top_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .top_content > section {
+    background: white;
+    box-shadow: rgba(182, 185, 189, 0.5) 0 3px 19px 0;
+    border-radius: 8px;
+    position: relative;
+    margin-top: -50px;
+    z-index: 10;
+    padding: 24px;
+  }
+  .top_content > section > header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .top_content > section > header h1 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #149821;
+    font-weight: 600;
+  }
+  .viewbutton a {
+    color: #149821;
+    text-decoration: none;
+  }
+  .popular_post {
+    width: 694px;
+  }
+  .news {
+    margin-left: 32px;
+    width: 387px;
+  }
+
+  /* post */
+  .post > article {
+    margin-top: 32px;
+  }
+  .post > article > a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+  }
+  .post > article > a:hover {
+    color: #149821;
+  }
+  .post > article:first-child {
+    margin-top: 24px;
+  }
+  .post_content {
+    flex: 1;
+    padding-left: 16px;
+  }
+  .post_heading {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .post_heading a {
+    text-decoration: none;
+    color: black;
+  }
+  .post_heading a:hover {
+    color: #149821;
+  }
+  .post_para {
+    margin-top: 8px;
+    margin-bottom: 0;
+    line-height: 26px;
+    color: #5f5f5f;
+  }
+  /* overriding */
+  .post_news article {
+    margin-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e9f5ea;
+  }
+  .post_news article:first-child {
+    margin-top: 24px;
+  }
+  .post_news article:last-child {
+    border-bottom: none;
+  }
+  .post_news .post_heading{
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+
+  @media(max-width: 1280px) {
+    .top_content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .top_content > section {
+      width: 650px;
+    }
+    .top_content > section.news {
+      margin-top: 32px;
+      margin-left: 0;
+    }
+  }
+
+  @media(max-width: 780px) {
+
+    .top_content > section {
+      width: 500px;
+    }
+  }
+
+  @media(max-width: 600px) {
+    .top_content > section {
+      width: 80%;
+    }
+    .top_content > section > header h1 {
+      font-weight: 700;
+    }
+    .post_heading {
+      font-size: 17px;
+    }
+    .post_image img {
+      width: 100px;
+    }
+    .post_para {
+      display: none;
+    }
+  }

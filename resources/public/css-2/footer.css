@@ -1,0 +1,127 @@
+.footer {
+    background: black;
+    color: white;
+    padding: 32px 0 16px;
+    font-weight: 300;
+  }
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer h4 {
+    margin: 0;
+  }
+  .footer p {
+    margin: 0;
+  }
+  .footer_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* footer info */
+  p.footer_info_location {
+    margin-top: 20px;
+    line-height: 22px;
+  }
+
+  /* footer contact */
+  .footer_contact p {
+    margin-top: 12px;
+  }
+  .footer_contact p:nth-child(2) {
+    margin-top: 16px;
+  }
+  .footer_contact p img {
+    margin-right: 8px;
+  }
+  .footer_contact a {
+    display: flex;
+  }
+
+  /* footer follow */
+  .footer_follow > div {
+    display: flex;
+  }
+  .footer_follow > div p {
+    margin-right: 8px;
+    margin-top: 16px;
+  }
+
+  /* footer links */
+  .footer_links > p {
+   margin-top: 8px; 
+  }
+  .footer_links > p:first-child {
+    margin-top: 0;
+  }
+  .footer_links a:hover {
+    text-decoration: underline;
+  }
+
+  /* footer copyright */
+  .footer_copyright {
+    border-top: 1px solid #202020;
+    width: 1000px;
+    margin: 24px auto 0;
+    padding: 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer_copyright_links a:hover {
+    text-decoration: underline;
+  }
+
+
+  @media (max-width: 1080px) {
+    .footer_container {
+      width: 700px;
+      flex-wrap: wrap;
+    }
+    .footer_container > div {
+      width: 40%;
+    }
+    .footer_container > div:nth-child(2n) {
+      width: 240px;
+    }
+    .footer_follow, .footer_links {
+      margin-top: 24px;
+    }
+    .footer_copyright {
+      width: 700px;
+    }
+  }
+
+  @media(max-width: 780px) {
+    .footer_container {
+      width: 550px;
+    }
+    .footer_copyright {
+      width: 550px;
+    }
+  }
+
+  @media(max-width: 600px) {
+    .footer {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .footer_container {
+      flex-direction: column;
+      width: 100%;
+    }
+    .footer_container > div {
+      margin-top: 48px;
+      width: 100%;
+    }
+    .footer_container > div:first-child {
+      margin-top: 0;
+    }
+
+    .footer_copyright {
+      width: 100%;
+    }
+  }

@@ -1,5 +1,4 @@
-{:deps {snow {:git/url "https://github.com/entranceplus/snow"
-              :sha "d2b9185d38f32e9abee054155f47f36411a5b6be"}
+{:deps {snow {:mvn/version "0.4.10"}
         voidwalker {:git/url "https://github.com/entranceplus/voidwalker"
                     :sha "fb9e877a362d52e61e348d9f2b7d5dea9208d6a9"}
         com.cemerick/friend {:mvn/version "0.2.3"}
