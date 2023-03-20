@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/entranceplus/web#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.2",
+    "browser-sync": "^2.29.0",
     "del": "^3.0.0",
     "firebase-tools": "^3.17.4",
     "gulp": "^3.9.1",
