@@ -8,7 +8,7 @@ ADD . /web
 RUN apt update
 RUN apt install curl -y
 
-RUN clj -Sdeps '{:mvn/local-repo "/.m2/repository"}'
+RUN clj -P
 
 EXPOSE 8080
 CMD clj -m web.core
