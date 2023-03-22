@@ -1,16 +1,14 @@
-FROM circleci/clojure:boot
+FROM clojure:openjdk-11-tools-deps-1.11.1.1113 AS builder
 MAINTAINER Akash Shakdwipeea <ashakdwipeea@gmail.com>
 
-RUN mkdir -p /home/circleci/web
-WORKDIR /home/circleci/web
+RUN mkdir -p /web
+WORKDIR /web
+ADD . /web
 
-ADD . /home/circleci/web
+RUN apt update
+RUN apt install curl -y
 
-VOLUME /home/akash/.m2/repository /home/circleci/.m2/repository
+RUN clj -Sdeps '{:mvn/local-repo "/.m2/repository"}'
 
-# prod
-#RUN boot deps
-
-#CMD ["boot" "jar"]
-
-CMD cat
+EXPOSE 8080
+CMD clj -m web.core

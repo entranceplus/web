@@ -26,4 +26,4 @@ void-konserve
 profiles.edn
 .clj-kondo
 output.calva-repl
-db.transit.jsonz
+db.transit.json
