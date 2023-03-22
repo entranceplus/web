@@ -4,7 +4,6 @@
             [ring.util.request :as r]
             [selmer.parser :as selmer]
             [hiccup.core :as h]
-            [voidwalker.content :as content]
             [taoensso.timbre :refer [info]]))
 
 (defn ok-response [response]
@@ -35,24 +34,25 @@
                "engineering" {:title "Ranklist for Engineering colleges"
                               :subtitle "Presenting the ranklists!"}
                "comedk" {:title "Ranklist for comedk colleges"
-                          :subtitle "Presenting the ranklists!"}
+                         :subtitle "Presenting the ranklists!"}
                "medical" {:title "Ranklist for medical colleges"}
                "entrance-exam" {:title "Engineering Entrance Exams In India"
                                 :subtitle "All the Entrance Exams on your fingertips now. We have mentioned all the important exams and their dates below alone with their cutoffs and the level on which the exam is held."})]
     (selmer-response "public/exam-list.html" :data data)))
 
-(defn get-all-articles [void-db]
-  (map (fn [[id {:keys [url content] :as post}]]
-         (println "url is " url)
-         (assoc post
-                :url url
-                :content (h/html (conj [:div.article-full content]))))
-       (content/get-post void-db)))
+;; (defn get-all-articles [void-db]
+;;   (map (fn [[id {:keys [url content] :as post}]]
+;;          (println "url is " url)
+;;          (assoc post
+;;                 :url url
+;;                 :content (h/html (conj [:div.article-full content]))))
+;;        (content/get-post void-db)))
 
 (defn get-blog-data [void-db]
-  (let [articles (get-all-articles void-db)]
-    {:articles articles
-     :banner (first articles)}))
+  ;; (let [articles (get-all-articles void-db)]
+  ;;   {:articles articles
+  ;;    :banner (first articles)}))
+  {:articles [] :banner ""})
 
 
 ;; (require '[entranceplus.core :as e])
@@ -68,10 +68,11 @@
 (defn get-detailed-article
   "here detail means with datasource expanded"
   [db url]
-  (->> db
-     get-all-articles
-     (filter #(= url (:url %)))
-     first))
+  ;; (->> db
+  ;;    get-all-articles
+  ;;    (filter #(= url (:url %)))
+  ;;    first)
+  {})
 
 ;; (->>  (get-detailed-article db "") :content)
 
@@ -102,9 +103,9 @@
    (GET "/branch-change" [] (selmer-response "public/whatsapp.html"))
    (GET "/direct-admission" [] (response/moved-permanently "/mentorship"))
    (ANY "*" {uri :uri}
-        (info "Request url is " uri)
-        (or (html-article db (subs uri 1))
-           (response/found "/")))))
+     (info "Request url is " uri)
+     (or (html-article db (subs uri 1))
+         (response/found "/")))))
 
 ;; next steps
 ;; transcriptor for testing apis

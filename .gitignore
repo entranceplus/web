@@ -24,3 +24,6 @@ pom.xml.asc
 void-konserve
 .cpcache
 profiles.edn
+.clj-kondo
+output.calva-repl
+db.transit.jsonz
